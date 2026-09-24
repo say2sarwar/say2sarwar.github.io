@@ -1,87 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sarwar Khan | Artificial Intelligence Researcher</title>
+    <title>Sarwar Khan | AI Researcher & Lecturer</title>
+
+    <meta name="description"
+          content="Academic and professional website of Sarwar Khan, Lecturer and Head of the Department of Artificial Intelligence at The University of Agriculture Swat.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #263238;
             background: #f5f7fa;
         }
 
-        /* Navigation */
+        a {
+            color: #1769aa;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
-            background: #102a43;
-            color: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+
+            background: #102a43;
+            color: white;
+
+            padding: 16px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
         nav .logo {
-            font-size: 22px;
+            font-size: 21px;
             font-weight: bold;
+            white-space: nowrap;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         nav ul li a {
             color: white;
+            font-size: 14px;
             text-decoration: none;
-            font-size: 15px;
         }
 
         nav ul li a:hover {
             color: #7dd3fc;
         }
 
-        /* Hero */
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
             background: linear-gradient(135deg, #102a43, #1d4e89);
             color: white;
-            padding: 90px 8%;
+            padding: 90px 7%;
         }
 
         .hero-content {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
         }
 
         .hero h1 {
-            font-size: 52px;
-            margin-bottom: 12px;
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 15px;
         }
 
-        .hero h2 {
-            font-size: 23px;
-            font-weight: normal;
-            margin-bottom: 8px;
+        .hero .position {
+            font-size: 24px;
+            margin-bottom: 6px;
         }
 
-        .hero h3 {
+        .hero .university {
             font-size: 18px;
-            font-weight: normal;
             opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            font-size: 17px;
+            opacity: 0.95;
             margin-bottom: 25px;
         }
 
@@ -93,9 +129,9 @@
         }
 
         .research-tags span {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.12);
             border: 1px solid rgba(255,255,255,0.3);
-            padding: 8px 14px;
+            padding: 7px 14px;
             border-radius: 20px;
             font-size: 14px;
         }
@@ -108,52 +144,300 @@
 
         .button {
             display: inline-block;
-            padding: 11px 18px;
+            padding: 11px 19px;
             border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
             background: white;
             color: #102a43;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         .button:hover {
             background: #dbeafe;
+            text-decoration: none;
         }
 
-        /* Main content */
+
+        /* =========================
+           MAIN
+        ========================= */
+
         main {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
-            padding: 60px 25px;
+            padding: 65px 25px;
         }
 
         section {
-            margin-bottom: 70px;
+            margin-bottom: 75px;
+            scroll-margin-top: 90px;
         }
 
         section h2 {
-            font-size: 30px;
+            font-size: 31px;
             color: #102a43;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
             border-bottom: 3px solid #1d4e89;
-            padding-bottom: 8px;
+        }
+
+        section h3 {
+            color: #102a43;
+            margin-bottom: 7px;
         }
 
         section p {
-            font-size: 17px;
+            font-size: 16px;
             margin-bottom: 15px;
         }
 
-        /* Footer */
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 35px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           RESEARCH
+        ========================= */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+        }
+
+        .research-card h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            border-left: 3px solid #1d4e89;
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #1d4e89;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #102a43;
+        }
+
+        .timeline-place {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           PUBLICATIONS
+        ========================= */
+
+        .publication {
+            background: white;
+            padding: 23px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #1d4e89;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .publication-number {
+            font-weight: bold;
+            color: #1d4e89;
+            margin-bottom: 5px;
+        }
+
+        .publication-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #102a43;
+            margin-bottom: 7px;
+        }
+
+        .publication-meta {
+            font-size: 14px;
+            color: #546e7a;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 4px 10px;
+            border-radius: 15px;
+            background: #eef2f7;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 23px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 9px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           AWARDS
+        ========================= */
+
+        .award {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .award-year {
+            font-weight: bold;
+            color: #1d4e89;
+        }
+
+
+        /* =========================
+           CV BUTTON
+        ========================= */
+
+        .cv-box {
+            background: #102a43;
+            color: white;
+            padding: 35px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cv-box h2 {
+            color: white;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #102a43;
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
+        footer p {
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
 
             nav {
                 flex-direction: column;
@@ -161,185 +445,1177 @@
             }
 
             nav ul {
-                flex-wrap: wrap;
                 justify-content: center;
-                gap: 15px;
             }
 
             .hero {
-                padding: 60px 25px;
+                padding: 65px 25px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 40px;
             }
 
-            .hero h2 {
-                font-size: 19px;
+            .hero .position {
+                font-size: 20px;
             }
+
+            .about-grid,
+            .research-grid,
+            .skills-grid,
+            .projects-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Sarwar Khan</div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+    <div class="logo">
+        Sarwar Khan
+    </div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
 
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
 
-            <h1>Sarwar Khan</h1>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-            <h2>Lecturer, Department of Artificial Intelligence</h2>
+<header class="hero">
 
-            <h3>
-                Head of Department · The University of Agriculture Swat
-            </h3>
+    <div class="hero-content">
 
-            <div class="research-tags">
-                <span>Artificial Intelligence</span>
-                <span>Machine Learning</span>
-                <span>Multimedia AI</span>
-                <span>Computer Vision</span>
-            </div>
+        <h1>Sarwar Khan</h1>
 
-            <div class="buttons">
+        <div class="position">
+            Lecturer, Department of Artificial Intelligence
+        </div>
 
-                <a class="button"
-                   href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                   target="_blank">
-                    Google Scholar
-                </a>
+        <div class="university">
+            Head of Department · The University of Agriculture Swat, Pakistan
+        </div>
 
-                <a class="button"
-                   href="#publications">
-                    Publications
-                </a>
+        <p class="hero-description">
+            Artificial Intelligence researcher, lecturer, and software developer
+            working across machine learning, deep learning, multimedia analysis,
+            computer vision, multimodal learning, adversarial machine learning,
+            and intelligent software systems.
+        </p>
 
-                <a class="button"
-                   href="#contact">
-                    Contact
-                </a>
+        <div class="research-tags">
 
-            </div>
+            <span>Artificial Intelligence</span>
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>Computer Vision</span>
+            <span>Multimedia AI</span>
+            <span>Multimodal Learning</span>
+            <span>Adversarial Machine Learning</span>
+            <span>Natural Language Processing</span>
 
         </div>
-    </header>
+
+        <div class="buttons">
+
+            <a class="button"
+               href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
+               target="_blank">
+                Google Scholar
+            </a>
+
+            <a class="button" href="#publications">
+                Publications
+            </a>
+
+            <a class="button" href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
 
 
-    <!-- Main Content -->
-    <main>
 
-        <!-- About -->
-        <section id="about">
+<main>
 
-            <h2>About Me</h2>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about-grid">
+
+        <div>
 
             <p>
                 I am a Lecturer in the Department of Artificial Intelligence
-                at The University of Agriculture Swat, where I also serve as
-                Head of Department.
+                at The University of Agriculture Swat, Pakistan, where I also
+                serve as Head of Department.
             </p>
 
             <p>
-                My academic and research interests focus on Artificial
-                Intelligence, Machine Learning, Multimedia AI, and Computer
-                Vision.
+                My academic and research work focuses on Artificial Intelligence,
+                Machine Learning, Deep Learning, Computer Vision, Multimedia
+                Analysis, Multimodal Learning, Audio-Visual Understanding,
+                and Adversarial Machine Learning.
             </p>
 
             <p>
-                More information about my research, publications, education,
-                projects, teaching, and professional experience will be
-                available on this website.
+                I am currently pursuing a Ph.D. in Computer Science at
+                National Chengchi University, Taipei, Taiwan. My doctoral
+                research focuses on improving the robustness of multimedia
+                classification systems against adversarial attacks.
             </p>
-
-        </section>
-
-
-        <!-- Research -->
-        <section id="research">
-
-            <h2>Research</h2>
 
             <p>
-                Research interests and projects will be added here.
+                Alongside academic research and teaching, I have professional
+                experience in AI development, full-stack software development,
+                API integration, web technologies, healthcare information
+                systems, and intelligent automation.
             </p>
 
-        </section>
+        </div>
 
 
-        <!-- Publications -->
-        <section id="publications">
+        <div class="contact-card">
 
-            <h2>Publications</h2>
+            <h3>Contact Information</h3>
+
+            <div class="contact-item">
+                <strong>Email:</strong><br>
+                <a href="mailto:say2sarwar@gmail.com">
+                    say2sarwar@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>Phone:</strong><br>
+                +92-346-0480820
+            </div>
+
+            <div class="contact-item">
+                <strong>International:</strong><br>
+                +886-905973041
+            </div>
+
+            <div class="contact-item">
+                <strong>Location:</strong><br>
+                Swat, Khyber Pakhtunkhwa, Pakistan
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section id="research">
+
+    <h2>Research</h2>
+
+    <div class="research-grid">
+
+        <div class="research-card">
+            <h3>Artificial Intelligence</h3>
+            <p>
+                AI model development, intelligent systems, deep learning,
+                machine learning, and AI-based decision systems.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <h3>Computer Vision</h3>
+            <p>
+                Image understanding, image classification, text detection,
+                recognition, visual analysis, and multimedia applications.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <h3>Multimedia AI</h3>
+            <p>
+                Multimedia classification, multimodal learning, audio-visual
+                understanding, and robust multimedia analysis.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <h3>Adversarial Machine Learning</h3>
+            <p>
+                Adversarial attacks, adversarial defense, model robustness,
+                and resilient deep learning systems.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <h3>Audio-Visual AI</h3>
+            <p>
+                Audio classification, audiovisual learning, audiovisual
+                clustering, and multimodal representation learning.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <h3>Natural Language Processing</h3>
+            <p>
+                NLP, large language models, retrieval-augmented generation,
+                prompt engineering, and intelligent automation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section id="publications">
+
+    <h2>Publications</h2>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2024 · 01</div>
+
+        <div class="publication-title">
+            W. Ahmad, Y.-T. Peng, Y.-H. Chang, G. O. Ganfure, and S. Khan,
+            "CAPST: Leveraging Capsule Networks and Temporal Attention for
+            Accurate Model Attribution in DeepFake Videos."
+        </div>
+
+        <div class="publication-meta">
+            ACM Transactions on Multimedia Computing, Communications and Applications,
+            2024.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2024 · 02</div>
+
+        <div class="publication-title">
+            S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
+            "Adversarially Robust DeepFake Detection via Adversarial Features
+            Similarity Learning."
+        </div>
+
+        <div class="publication-meta">
+            International Conference on Multimedia Modeling,
+            Springer, 2024, pp. 503–516.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2024 · 03</div>
+
+        <div class="publication-title">
+            S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
+            "Robust Action Recognition through Self-Supervised Audiovisual
+            Adversarial Clustering."
+        </div>
+
+        <div class="publication-meta">
+            ACM Transactions on Multimedia Computing, Communications and Applications
+            (TOMM), 2024.
+        </div>
+
+        <div class="status">
+            Under Review
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2023 · 04</div>
+
+        <div class="publication-title">
+            S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
+            "Towards Adversarial Robustness for Multi-Mode Data through
+            Metric Learning."
+        </div>
+
+        <div class="publication-meta">
+            Sensors, Vol. 23, No. 13, Article 6173, 2023.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2022 · 05</div>
+
+        <div class="publication-title">
+            S. Khan, I. Ali, F. Ghaffar, and Q. Mazhar-ul-Haq,
+            "Classification of Macromolecules Based on Amino Acid Sequences
+            Using Deep Learning."
+        </div>
+
+        <div class="publication-meta">
+            Engineering, Technology & Applied Science Research,
+            Vol. 12, No. 6, pp. 9491–9495, 2022.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2022 · 06</div>
+
+        <div class="publication-title">
+            S. A. Shahzad, A. Hashmi, S. Khan, Y.-T. Peng, Y. Tsao,
+            and H.-W. Wang, "LipSync Matters: A Novel Multimodal
+            Forgery Detector."
+        </div>
+
+        <div class="publication-meta">
+            2022 Asia-Pacific Signal and Information Processing Association
+            Annual Summit and Conference (APSIPA ASC), IEEE, 2022,
+            pp. 1885–1892.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2020 · 07</div>
+
+        <div class="publication-title">
+            F. Ghaffar, S. Khan, B. Uyyanonvara, C. Sinthanayothin,
+            and H. Kaneko, "Detection of Diabetic Anomalies in Retinal
+            Images Using Morphological Cascading Decision Tree."
+        </div>
+
+        <div class="publication-meta">
+            arXiv preprint arXiv:2001.01953, 2020.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2017 · 08</div>
+
+        <div class="publication-title">
+            S. Khan and N. Sadiq, "Design and Configuration of VoIP Based
+            PBX Using Asterisk Server and OPNET Platform."
+        </div>
+
+        <div class="publication-meta">
+            2017 International Electrical Engineering Congress (iEECON),
+            IEEE, 2017, pp. 1–4.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2017 · 09</div>
+
+        <div class="publication-title">
+            S. Khan, S. Thainimit, I. Kumazawa, and S. Marukatat,
+            "Text Detection and Recognition on Traffic Panel in Roadside Imagery."
+        </div>
+
+        <div class="publication-meta">
+            2017 8th International Conference of Information and Communication
+            Technology for Embedded Systems (IC-ICTES), IEEE, 2017, pp. 1–6.
+        </div>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-number">2017 · 10</div>
+
+        <div class="publication-title">
+            S. Khan, S. Thainimit, I. Kumazawa, S. Marukatat, and F. Ghaffar,
+            "Character Segmentation on Traffic Panels Using Visual Appearance
+            from Roadside Imagery."
+        </div>
+
+        <div class="publication-meta">
+            2017 Third Asian Conference on Defence Technology (ACDT),
+            2017, pp. 65–69.
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2017 – Present
+            </div>
+
+            <div class="timeline-title">
+                Ph.D. in Computer Science
+            </div>
+
+            <div class="timeline-place">
+                National Chengchi University, Taipei, Taiwan
+            </div>
 
             <p>
-                Publications will be added here.
+                <strong>Research focus:</strong>
+                Artificial Intelligence, Deep Learning, Adversarial Machine
+                Learning, Computer Vision, Multimedia Analysis, Multimodal
+                Learning, Audio-Visual Understanding, and Robust AI Systems.
             </p>
-
-        </section>
-
-
-        <!-- Education -->
-        <section id="education">
-
-            <h2>Education</h2>
 
             <p>
-                Academic qualifications will be added here.
+                <strong>Dissertation:</strong>
+                Exploring Adversarial Defense in Multimedia Classification Systems.
             </p>
-
-        </section>
-
-
-        <!-- Projects -->
-        <section id="projects">
-
-            <h2>Projects</h2>
 
             <p>
-                Research and professional projects will be added here.
+                Research on improving the robustness of deep learning models
+                against adversarial attacks. Developed novel AI methods including
+                Multi-Prototype Metric Learning, Adversarial Feature Similarity
+                Learning (AFSL), and Audiovisual Adversarial Clustering (AVAC)
+                for image classification, audio classification, multimodal
+                learning, and adversarial defense.
             </p>
 
-        </section>
+        </div>
 
 
-        <!-- Contact -->
-        <section id="contact">
+        <div class="timeline-item">
 
-            <h2>Contact</h2>
+            <div class="timeline-date">
+                2015 – 2017
+            </div>
+
+            <div class="timeline-title">
+                M.Eng. in Information and Communication Technology
+                for Embedded Systems (ICTES)
+            </div>
+
+            <div class="timeline-place">
+                Kasetsart University, Thailand
+            </div>
 
             <p>
-                Contact information and academic profiles will be added here.
+                <strong>CGPA:</strong> 3.72 / 4.00
             </p>
 
-        </section>
+            <p>
+                <strong>Thesis:</strong>
+                Text Detection and Recognition on Traffic Panels Using
+                Roadside Imagery.
+            </p>
 
-    </main>
+            <p>
+                Developed an AI-based intelligent transportation system
+                capable of real-time multilingual text detection and recognition
+                using computer vision and machine learning techniques.
+                Implemented using Python and OpenCV with MSER, SVM, KNN,
+                and Artificial Neural Networks.
+            </p>
+
+        </div>
 
 
-    <!-- Footer -->
-    <footer>
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2007 – 2011
+            </div>
+
+            <div class="timeline-title">
+                B.Sc. in Telecommunication Engineering
+            </div>
+
+            <div class="timeline-place">
+                University of Engineering and Technology (UET), Peshawar, Pakistan
+            </div>
+
+            <p>
+                <strong>CGPA:</strong> 3.40 / 4.00
+            </p>
+
+            <p>
+                <strong>Final Year Project:</strong>
+                Design and Implementation of a VoIP-Based PBX Using the
+                Asterisk Server on Linux Platform.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience">
+
+    <h2>Professional Experience</h2>
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2025 – Present
+            </div>
+
+            <div class="timeline-title">
+                Lecturer & Head of Department
+            </div>
+
+            <div class="timeline-place">
+                Department of Artificial Intelligence,
+                The University of Agriculture Swat, Pakistan
+            </div>
+
+            <p>
+                Teaching undergraduate courses including Programming
+                Fundamentals, Object-Oriented Programming (OOP),
+                Information and Communication Technology (ICT),
+                and Digital Logic Design (DLD).
+            </p>
+
+            <p>
+                Conducting research and practical development in Artificial
+                Intelligence, Machine Learning, Deep Learning, Natural Language
+                Processing, Computer Vision, Multimodal AI, Audio Classification,
+                and Intelligent Automation.
+            </p>
+
+            <p>
+                Designing AI-based laboratory exercises, programming assignments,
+                and student projects involving Python, machine learning,
+                deep learning, and data analysis.
+            </p>
+
+            <p>
+                Supervising undergraduate research projects related to AI,
+                software engineering, intelligent systems, and
+                data-driven applications.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2018 – Present
+            </div>
+
+            <div class="timeline-title">
+                AI & Full-Stack Software Developer
+            </div>
+
+            <div class="timeline-place">
+                Freelance
+            </div>
+
+            <p>
+                Design, develop, and deploy AI-powered software solutions
+                using Python, PHP, Laravel, Flask, and modern web technologies.
+            </p>
+
+            <p>
+                Develop AI-enabled applications using Large Language Models,
+                Prompt Engineering, Retrieval-Augmented Generation (RAG),
+                Natural Language Processing, and intelligent automation.
+            </p>
+
+            <p>
+                Build and integrate RESTful APIs, healthcare information systems,
+                AI chat assistants, workflow automation tools, and secure
+                data-processing pipelines.
+            </p>
+
+            <p>
+                Develop machine learning and deep learning solutions for
+                classification, prediction, computer vision, multimodal
+                learning, audio analysis, and intelligent decision-support
+                applications.
+            </p>
+
+            <p>
+                Professional development experience includes WordPress,
+                WooCommerce, Laravel, Flask, API integrations, OCR,
+                image classification, text classification, and
+                data-driven applications.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2015 – 2017
+            </div>
+
+            <div class="timeline-title">
+                Teaching Assistant
+            </div>
+
+            <div class="timeline-place">
+                Sirindhorn International Institute of Technology (SIIT),
+                Thammasat University, Thailand
+            </div>
+
+            <p>
+                Assisted in teaching Python programming, MATLAB, and
+                engineering laboratory courses.
+            </p>
+
+            <p>
+                Supported practical programming sessions, guided student
+                software projects, and assisted with course development
+                and assessment.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2012 – 2015
+            </div>
+
+            <div class="timeline-title">
+                Operations & Maintenance Engineer
+            </div>
+
+            <div class="timeline-place">
+                Joint telecommunications project of Saudi Telecom Company
+                (STC) and Alcatel-Lucent (ALU), Saudi Arabia
+            </div>
+
+            <p>
+                Managed installation, integration, testing, operation,
+                and maintenance of telecommunications infrastructure
+                involving Alcatel-Lucent, Nokia, and Huawei equipment.
+            </p>
+
+            <p>
+                Performed system troubleshooting, network optimization,
+                preventive maintenance, technical documentation, and
+                field engineering support while collaborating with
+                multidisciplinary engineering teams.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects">
+
+    <h2>Projects & Technical Work</h2>
+
+    <div class="projects-grid">
+
+
+        <div class="project-card">
+
+            <h3>Adversarially Robust AI</h3>
+
+            <p>
+                Research into adversarial robustness of deep learning
+                models for multimedia classification, including
+                adversarial feature learning, metric learning,
+                and audiovisual models.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Multimedia & Audio-Visual AI</h3>
+
+            <p>
+                Development and research involving image, audio,
+                and multimodal learning systems for classification,
+                recognition, and robust AI applications.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Traffic Panel Text Recognition</h3>
+
+            <p>
+                AI-based intelligent transportation system for
+                multilingual traffic-panel text detection and recognition
+                using roadside imagery, Python, OpenCV, MSER, SVM,
+                KNN, and ANN.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>AI & Software Systems</h3>
+
+            <p>
+                Development of AI-powered web applications, REST APIs,
+                healthcare information systems, automation workflows,
+                AI assistants, OCR systems, and intelligent data-processing
+                applications.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TECHNICAL SKILLS
+========================================================= -->
+
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+            <h3>Artificial Intelligence</h3>
+
+            <p>
+                Deep Learning, Machine Learning, Large Language Models (LLMs),
+                Prompt Engineering, Retrieval-Augmented Generation (RAG),
+                Natural Language Processing (NLP), Computer Vision,
+                Adversarial Machine Learning, AI Model Development,
+                AI Automation, Intelligent Systems
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Programming</h3>
+
+            <p>
+                Python, PHP, C, C++, Java, MATLAB, Verilog HDL,
+                FPGA Programming
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>AI Frameworks</h3>
+
+            <p>
+                TensorFlow, Keras, PyTorch, Scikit-learn, NumPy,
+                Pandas, OpenCV, Hugging Face Transformers,
+                LangChain, OpenAI API
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Data Science</h3>
+
+            <p>
+                Data Collection, Data Cleaning, Data Preprocessing,
+                Feature Engineering, Data Visualization, Model Training,
+                Model Evaluation, Hyperparameter Optimization
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Software Development</h3>
+
+            <p>
+                REST APIs, JSON, OAuth, Microservices, Object-Oriented
+                Programming, Software Architecture, Design Patterns,
+                Git, GitHub
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Web Technologies</h3>
+
+            <p>
+                Laravel, Flask, FastAPI, WordPress, WooCommerce,
+                HTML5, CSS3, JavaScript, Bootstrap
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Databases</h3>
+
+            <p>
+                MySQL, SQLite, PostgreSQL, Database Design
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Cloud & DevOps</h3>
+
+            <p>
+                Docker, Linux, Google Cloud Platform (GCP),
+                Microsoft Azure, Amazon Web Services (AWS),
+                CI/CD, MLOps
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Networking</h3>
+
+            <p>
+                Cisco Certified Network Associate (CCNA),
+                TCP/IP, Network Security Fundamentals
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Research & Teaching</h3>
+
+            <p>
+                Scientific Research, Technical Writing, Academic Publishing,
+                Curriculum Development, Student Supervision,
+                Project-Based Learning
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCHOLARSHIPS & AWARDS
+========================================================= -->
+
+<section id="awards">
+
+    <h2>Scholarships, Awards & Certifications</h2>
+
+
+    <div class="award">
+
+        <div class="award-year">2017</div>
+
+        <h3>Taiwan International Graduate Program (TIGP) Ph.D. Scholarship</h3>
 
         <p>
-            © 2026 Sarwar Khan
+            Awarded a fully funded international Ph.D. scholarship to
+            pursue doctoral research in Artificial Intelligence and
+            Machine Learning at National Chengchi University, Taiwan.
         </p>
 
-    </footer>
+    </div>
+
+
+    <div class="award">
+
+        <div class="award-year">2015</div>
+
+        <h3>Graduate Scholarship for Master of Engineering</h3>
+
+        <p>
+            Awarded a fully funded graduate scholarship by Kasetsart
+            University, Thailand, for the Master of Engineering in
+            Information and Communication Technology for Embedded Systems.
+        </p>
+
+    </div>
+
+
+    <div class="award">
+
+        <div class="award-year">2021</div>
+
+        <h3>Machine Learning Summer School (MLSS), Taipei</h3>
+
+        <p>
+            Completed advanced training in modern machine learning,
+            deep learning, computer vision, natural language processing,
+            reinforcement learning, and AI research methodologies.
+        </p>
+
+    </div>
+
+
+    <div class="award">
+
+        <div class="award-year">2011</div>
+
+        <h3>Cisco Certified Network Associate (CCNA)</h3>
+
+        <p>
+            Professional certification covering computer networking,
+            routing and switching, TCP/IP, network security,
+            and network administration.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LANGUAGES
+========================================================= -->
+
+<section id="languages">
+
+    <h2>Languages</h2>
+
+    <div class="research-grid">
+
+        <div class="research-card">
+
+            <h3>English</h3>
+
+            <p>
+                Professional proficiency in reading, writing,
+                speaking, and academic communication.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>Urdu</h3>
+
+            <p>
+                Native language.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CV
+========================================================= -->
+
+<section>
+
+    <div class="cv-box">
+
+        <h2>Curriculum Vitae</h2>
+
+        <p style="margin-bottom:20px;">
+            A complete academic and professional curriculum vitae
+            will be available here.
+        </p>
+
+        <!--
+        We will add the CV PDF here later.
+
+        Example:
+
+        <a class="button" href="cv.pdf" target="_blank">
+            Download CV
+        </a>
+        -->
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="contact-grid">
+
+
+        <div class="contact-box">
+
+            <h3>Email</h3>
+
+            <p>
+                <a href="mailto:say2sarwar@gmail.com">
+                    say2sarwar@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>Google Scholar</h3>
+
+            <p>
+                <a href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
+                   target="_blank">
+                    View Publications
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>Location</h3>
+
+            <p>
+                Swat, Khyber Pakhtunkhwa<br>
+                Pakistan
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Sarwar Khan
+    </p>
+
+    <p>
+        Lecturer · Department of Artificial Intelligence ·
+        The University of Agriculture Swat
+    </p>
+
+</footer>
+
 
 </body>
 </html>
