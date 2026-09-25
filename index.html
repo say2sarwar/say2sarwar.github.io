@@ -1357,6 +1357,19 @@
                 font-size: 17px;
             }
         }
+        .profile-frame,
+.profile-frame::before,
+.profile-frame::after {
+    box-shadow: none;
+    background: transparent;
+}
+        .profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
 
     </style>
 
@@ -1518,7 +1531,7 @@
 
                     <div class="hero-profile reveal">
 
-                                            <div class="profile-frame">
+                    <div class="profile-frame">
                     
                         <img src="9-21.jpg" alt="Sarwar Khan">
                     
