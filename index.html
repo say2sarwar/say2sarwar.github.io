@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sarwar Khan | AI Researcher & Lecturer</title>
+    <title>Sarwar Khan | AI & Software Developer</title>
 
     <meta name="description"
-        content="Sarwar Khan — Lecturer, AI researcher and software developer working in Artificial Intelligence, Machine Learning, Computer Vision, Multimedia AI and Adversarial Machine Learning.">
+        content="Sarwar Khan — AI and software developer working with Python, PHP, Laravel, Flask, Django, WordPress, APIs, Generative AI, LLMs, AI Agents, LangGraph and intelligent automation.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -196,62 +196,6 @@
 
 
         /* =========================================================
-           GOOGLE SCHOLAR BUTTON
-        ========================================================= */
-
-        .scholar-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 9px 15px;
-
-            border: 1px solid #d9e3f2;
-            border-radius: 8px;
-
-            color: var(--navy);
-
-            font-size: 12px;
-            font-weight: 700;
-
-            background: #ffffff;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .scholar-link:hover {
-            transform: translateY(-2px);
-
-            border-color: #a9c8f5;
-
-            background: #f6faff;
-
-            box-shadow: 0 8px 22px rgba(23, 105, 224, 0.10);
-        }
-
-        .scholar-icon {
-            width: 17px;
-            height: 17px;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            color: var(--blue);
-
-            font-size: 11px;
-            font-weight: 800;
-
-            border: 1.5px solid currentColor;
-            border-radius: 50%;
-        }
-
-
-        /* =========================================================
            MAIN
         ========================================================= */
 
@@ -335,18 +279,18 @@
         .hero-title {
             font-family: "Manrope", sans-serif;
 
-            font-size: 22px;
+            font-size: 23px;
             font-weight: 700;
 
             color: #253650;
 
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .hero-institution {
             color: var(--muted);
 
-            font-size: 15px;
+            font-size: 14px;
 
             margin-bottom: 27px;
         }
@@ -371,6 +315,11 @@
 
             gap: 11px;
         }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
 
         .button {
             display: inline-flex;
@@ -443,12 +392,7 @@
 
             border-radius: 16px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #f8fbff,
-                    #eef4fb
-                );
+            background: #ffffff;
 
             display: flex;
             align-items: center;
@@ -457,68 +401,16 @@
             position: relative;
 
             overflow: hidden;
-
-            box-shadow:
-                0 22px 55px rgba(24, 48, 82, 0.08);
         }
 
-        .profile-frame::before {
-            content: "";
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
 
-            position: absolute;
+            object-fit: contain;
+            object-position: center;
 
-            width: 170px;
-            height: 170px;
-
-            border-radius: 50%;
-
-            background: #dbeafe;
-
-            top: -65px;
-            right: -55px;
-        }
-
-        .profile-frame::after {
-            content: "";
-
-            position: absolute;
-
-            width: 130px;
-            height: 130px;
-
-            border-radius: 50%;
-
-            background: #edf4ff;
-
-            bottom: -50px;
-            left: -40px;
-        }
-
-        .profile-initials {
-            position: relative;
-            z-index: 2;
-
-            width: 125px;
-            height: 125px;
-
-            border-radius: 50%;
-
-            background: white;
-
-            border: 1px solid #dce5f0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-family: "Manrope", sans-serif;
-
-            font-size: 36px;
-            font-weight: 800;
-
-            color: var(--navy);
-
-            box-shadow: 0 12px 30px rgba(24, 48, 82, 0.08);
+            display: block;
         }
 
 
@@ -566,7 +458,7 @@
         }
 
         .section-intro {
-            max-width: 720px;
+            max-width: 760px;
 
             color: var(--muted);
 
@@ -630,6 +522,417 @@
 
         .fact-value a {
             color: var(--blue);
+        }
+
+
+        /* =========================================================
+           AI / ML ARCHITECTURE
+        ========================================================= */
+
+        .architecture {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+        }
+
+        .architecture-box {
+            width: 100%;
+
+            padding: 32px 35px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: #ffffff;
+
+            text-align: center;
+
+            position: relative;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .architecture-box:hover {
+            transform: translateY(-4px);
+
+            border-color: #cbd9ec;
+
+            box-shadow: 0 18px 40px rgba(24, 48, 82, 0.07);
+        }
+
+        .architecture-box.ai-box {
+            background: linear-gradient(
+                135deg,
+                #fbfdff,
+                #f4f8ff
+            );
+        }
+
+        .architecture-label {
+            font-family: "Manrope", sans-serif;
+
+            color: var(--navy);
+
+            font-size: 20px;
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+
+            margin-bottom: 16px;
+        }
+
+        .architecture-subtitle {
+            color: var(--blue);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 15px;
+        }
+
+        .architecture-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .architecture-item {
+            padding: 7px 12px;
+
+            border: 1px solid #dfe6ef;
+
+            border-radius: 7px;
+
+            background: #ffffff;
+
+            color: #536176;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .architecture-connector {
+            width: 1px;
+            height: 42px;
+
+            background: #cfd8e5;
+
+            position: relative;
+        }
+
+        .architecture-connector::after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            bottom: -1px;
+
+            width: 7px;
+            height: 7px;
+
+            border-right: 1px solid #aab7c8;
+            border-bottom: 1px solid #aab7c8;
+
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .architecture-columns {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+
+            width: 100%;
+        }
+
+        .architecture-small {
+            min-height: 205px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .architecture-small .architecture-label {
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           AUTOMATION
+        ========================================================= */
+
+        .automation-box {
+            margin-top: 16px;
+
+            width: 100%;
+
+            padding: 27px 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: #fbfcfe;
+
+            text-align: center;
+        }
+
+        .automation-box h3 {
+            font-family: "Manrope", sans-serif;
+
+            color: var(--navy);
+
+            font-size: 18px;
+
+            margin-bottom: 13px;
+        }
+
+
+        /* =========================================================
+           EXPERIENCE
+        ========================================================= */
+
+        .experience-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .experience-item {
+            display: grid;
+
+            grid-template-columns: 210px 1fr;
+
+            gap: 55px;
+
+            padding: 37px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-date {
+            color: var(--blue);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 0.4px;
+        }
+
+        .experience-item h3 {
+            font-family: "Manrope", sans-serif;
+
+            color: var(--navy);
+
+            font-size: 21px;
+
+            margin-bottom: 4px;
+        }
+
+        .experience-place {
+            color: #53647c;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .experience-item p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+        .experience-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 17px;
+        }
+
+        .experience-tag {
+            padding: 5px 9px;
+
+            border: 1px solid #dce4ee;
+
+            border-radius: 6px;
+
+            background: #fafcff;
+
+            color: #526177;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+        .project-card {
+            min-height: 275px;
+
+            padding: 32px;
+
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            background: #ffffff;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: #fbfdff;
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 18px 40px rgba(24, 48, 82, 0.06);
+        }
+
+        .project-number {
+            color: #9ca7b7;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 22px;
+        }
+
+        .project-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            color: var(--navy);
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
+        .project-tag {
+            padding: 5px 9px;
+
+            border-radius: 6px;
+
+            background: var(--blue-light);
+
+            color: #315b93;
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           TECHNOLOGY STACK
+        ========================================================= */
+
+        .stack-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+        .stack-card {
+            padding: 29px;
+
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            background: white;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .stack-card:hover {
+            background: #fbfdff;
+
+            transform: translateY(-3px);
+        }
+
+        .stack-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            color: var(--navy);
+
+            font-size: 17px;
+
+            margin-bottom: 13px;
+        }
+
+        .stack-items {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
+        .stack-item {
+            padding: 6px 10px;
+
+            border: 1px solid #dce4ee;
+
+            border-radius: 6px;
+
+            background: #ffffff;
+
+            color: #56647a;
+
+            font-size: 11px;
+            font-weight: 600;
         }
 
 
@@ -699,123 +1002,64 @@
 
 
         /* =========================================================
-           EDUCATION
+           BACKGROUND
         ========================================================= */
 
-        .education-list {
+        .background-list {
             border-top: 1px solid var(--border);
         }
 
-        .education-item {
+        .background-item {
             display: grid;
 
-            grid-template-columns: 250px 1fr;
+            grid-template-columns: 220px 1fr;
 
-            gap: 55px;
+            gap: 50px;
 
-            padding: 35px 0;
+            padding: 32px 0;
 
             border-bottom: 1px solid var(--border);
         }
 
-        .education-label {
+        .background-type {
             color: var(--blue);
 
-            font-size: 12px;
-            font-weight: 700;
-
-            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 800;
 
             letter-spacing: 1px;
+
+            text-transform: uppercase;
         }
 
-        .education-item h3 {
+        .background-item h3 {
             font-family: "Manrope", sans-serif;
 
             color: var(--navy);
 
-            font-size: 21px;
+            font-size: 20px;
 
             margin-bottom: 5px;
         }
 
-        .education-place {
+        .background-place {
             color: #53647c;
 
             font-size: 14px;
             font-weight: 600;
 
-            margin-bottom: 15px;
+            margin-bottom: 9px;
         }
 
-        .education-item p {
+        .background-item p {
             color: var(--muted);
 
-            font-size: 14px;
-
-            margin-bottom: 8px;
+            font-size: 13px;
         }
 
 
         /* =========================================================
-           EXPERIENCE
-        ========================================================= */
-
-        .experience-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .experience-item {
-            display: grid;
-
-            grid-template-columns: 210px 1fr;
-
-            gap: 55px;
-
-            padding: 37px 0;
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .experience-date {
-            color: var(--blue);
-
-            font-size: 12px;
-            font-weight: 700;
-
-            letter-spacing: 0.4px;
-        }
-
-        .experience-item h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 21px;
-
-            margin-bottom: 4px;
-        }
-
-        .experience-place {
-            color: #53647c;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            margin-bottom: 15px;
-        }
-
-        .experience-item p {
-            color: var(--muted);
-
-            font-size: 14px;
-
-            margin-bottom: 8px;
-        }
-
-
-        /* =========================================================
-           PUBLICATIONS
+           PUBLICATIONS / RESEARCH
         ========================================================= */
 
         .publication-list {
@@ -895,91 +1139,6 @@
             text-transform: uppercase;
 
             letter-spacing: 0.5px;
-        }
-
-
-        /* =========================================================
-           SKILLS
-        ========================================================= */
-
-        .skills-list {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            border-top: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-        }
-
-        .skill {
-            padding: 27px;
-
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .skill h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 16px;
-
-            margin-bottom: 7px;
-        }
-
-        .skill p {
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-
-        /* =========================================================
-           AWARDS
-        ========================================================= */
-
-        .awards-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .award {
-            display: grid;
-
-            grid-template-columns: 190px 1fr;
-
-            gap: 40px;
-
-            padding: 25px 0;
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .award-type {
-            color: var(--blue);
-
-            font-size: 11px;
-            font-weight: 800;
-
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-        }
-
-        .award h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 17px;
-
-            margin-bottom: 5px;
-        }
-
-        .award p {
-            color: var(--muted);
-
-            font-size: 13px;
         }
 
 
@@ -1145,10 +1304,6 @@
                 padding-right: 8px;
             }
 
-            .scholar-link {
-                display: none;
-            }
-
             .hero-inner {
                 grid-template-columns: 1fr 240px;
 
@@ -1158,6 +1313,10 @@
             .profile-frame {
                 width: 215px;
                 height: 270px;
+            }
+
+            .architecture-columns {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1229,13 +1388,6 @@
                 height: 225px;
             }
 
-            .profile-initials {
-                width: 105px;
-                height: 105px;
-
-                font-size: 31px;
-            }
-
             .about-layout {
                 grid-template-columns: 1fr;
 
@@ -1246,17 +1398,19 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .education-item,
-            .experience-item {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stack-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item,
+            .background-item {
                 grid-template-columns: 1fr;
 
                 gap: 10px;
-            }
-
-            .award {
-                grid-template-columns: 1fr;
-
-                gap: 8px;
             }
 
             .contact-box {
@@ -1319,8 +1473,18 @@
                 grid-template-columns: 1fr;
             }
 
-            .skills-list {
-                grid-template-columns: 1fr;
+            .architecture-box {
+                padding: 25px 18px;
+            }
+
+            .architecture-label {
+                font-size: 18px;
+            }
+
+            .architecture-item {
+                font-size: 11px;
+
+                padding: 6px 9px;
             }
 
             .publication {
@@ -1357,19 +1521,6 @@
                 font-size: 17px;
             }
         }
-        .profile-frame,
-.profile-frame::before,
-.profile-frame::after {
-    box-shadow: none;
-    background: transparent;
-}
-        .profile-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
 
     </style>
 
@@ -1400,35 +1551,19 @@
 
                 <a href="#about">About</a>
 
-                <a href="#research">Research</a>
+                <a href="#ai">AI / ML</a>
 
-                <a href="#education">Education</a>
+                <a href="#stack">Stack</a>
 
                 <a href="#experience">Experience</a>
 
-                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
 
-                <a href="#skills">Skills</a>
-
-                <a href="#awards">Awards</a>
+                <a href="#research">Research</a>
 
                 <a href="#contact">Contact</a>
 
             </nav>
-
-
-            <a
-                class="scholar-link"
-                href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <span class="scholar-icon">G</span>
-
-                Google Scholar
-
-            </a>
 
 
             <button
@@ -1466,7 +1601,7 @@
                     <div class="hero-content reveal">
 
                         <div class="hero-kicker">
-                            Lecturer · Researcher · AI Developer
+                            AI · Backend · Web · Automation
                         </div>
 
 
@@ -1476,22 +1611,21 @@
 
 
                         <div class="hero-title">
-                            Lecturer &amp; AI Researcher
+                            AI &amp; Full-Stack Developer
                         </div>
 
 
                         <div class="hero-institution">
-                            Department of Artificial Intelligence ·
-                            The University of Agriculture Swat
+                            Building intelligent software systems, APIs and modern web applications
                         </div>
 
 
                         <p class="hero-description">
 
-                            Working at the intersection of Artificial Intelligence,
-                            Machine Learning, Computer Vision, Multimedia Analysis,
-                            Multimodal Learning, Audio-Visual Understanding,
-                            and Robust AI Systems.
+                            I build AI-powered applications, backend systems,
+                            APIs, intelligent automation workflows and modern
+                            web platforms using Python, PHP, Laravel, Flask,
+                            Django, WordPress and AI agent technologies.
 
                         </p>
 
@@ -1500,19 +1634,17 @@
 
                             <a
                                 class="button button-primary"
-                                href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#projects"
                             >
-                                Google Scholar
+                                View Projects
                             </a>
 
 
                             <a
                                 class="button button-outline"
-                                href="#publications"
+                                href="#stack"
                             >
-                                Publications
+                                Technology Stack
                             </a>
 
 
@@ -1531,11 +1663,14 @@
 
                     <div class="hero-profile reveal">
 
-                    <div class="profile-frame">
-                    
-                        <img src="9-21.jpg" alt="Sarwar Khan">
-                    
-                    </div>
+                        <div class="profile-frame">
+
+                            <img
+                                src="9-21.jpg"
+                                alt="Sarwar Khan"
+                            >
+
+                        </div>
 
                     </div>
 
@@ -1563,8 +1698,13 @@
                     </div>
 
                     <h2 class="section-title">
-                        About Me
+                        Developer Profile
                     </h2>
+
+                    <p class="section-intro">
+                        Building software across AI, backend systems,
+                        APIs, web platforms and automation.
+                    </p>
 
                 </div>
 
@@ -1575,32 +1715,31 @@
                     <div class="about-copy reveal">
 
                         <p>
-                            I am a Lecturer in the Department of Artificial
-                            Intelligence at The University of Agriculture Swat.
+                            I am a software developer working across
+                            Artificial Intelligence, backend development,
+                            web applications, APIs and intelligent automation.
                         </p>
 
                         <p>
-                            My research interests span Artificial Intelligence,
-                            Machine Learning, Deep Learning, Computer Vision,
-                            Multimedia Analysis, Multimodal Learning,
-                            Audio-Visual Understanding, and Adversarial
-                            Machine Learning.
+                            My development work includes Python, PHP, Laravel,
+                            Flask, Django, WordPress, WooCommerce and
+                            API-driven applications. I build systems that
+                            connect application logic, external services,
+                            databases and intelligent processing.
                         </p>
 
                         <p>
-                            I am pursuing doctoral research in Computer Science
-                            at National Chengchi University, Taipei, Taiwan.
-                            My research focuses on improving the robustness of
-                            deep learning systems for multimedia classification
-                            against adversarial attacks.
+                            On the AI side, I work with Generative AI,
+                            Large Language Models, RAG, AI Agents,
+                            LangGraph, machine learning, deep learning,
+                            computer vision and intelligent automation.
                         </p>
 
                         <p>
-                            Alongside academic research and teaching, I work on
-                            AI and full-stack software systems, including
-                            intelligent applications, APIs, automation,
-                            healthcare information systems, and modern web
-                            platforms.
+                            I also work with REST APIs, JSON, web scraping,
+                            BeautifulSoup, data processing and third-party
+                            integrations to build practical end-to-end
+                            software systems.
                         </p>
 
                     </div>
@@ -1611,11 +1750,11 @@
                         <div class="fact">
 
                             <div class="fact-label">
-                                Position
+                                Primary Focus
                             </div>
 
                             <div class="fact-value">
-                                Lecturer
+                                AI &amp; Software Development
                             </div>
 
                         </div>
@@ -1624,11 +1763,11 @@
                         <div class="fact">
 
                             <div class="fact-label">
-                                Department
+                                Backend
                             </div>
 
                             <div class="fact-value">
-                                Artificial Intelligence
+                                Python · PHP · Laravel · Flask · Django
                             </div>
 
                         </div>
@@ -1637,11 +1776,11 @@
                         <div class="fact">
 
                             <div class="fact-label">
-                                Institution
+                                AI
                             </div>
 
                             <div class="fact-value">
-                                The University of Agriculture Swat
+                                LLMs · RAG · AI Agents · LangGraph
                             </div>
 
                         </div>
@@ -1650,13 +1789,11 @@
                         <div class="fact">
 
                             <div class="fact-label">
-                                Academic Email
+                                Web
                             </div>
 
                             <div class="fact-value">
-                                <a href="mailto:sarwar@uoas.edu.pk">
-                                    sarwar@uoas.edu.pk
-                                </a>
+                                WordPress · WooCommerce · JavaScript
                             </div>
 
                         </div>
@@ -1665,19 +1802,11 @@
                         <div class="fact">
 
                             <div class="fact-label">
-                                Research Profile
+                                APIs
                             </div>
 
                             <div class="fact-value">
-
-                                <a
-                                    href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Google Scholar
-                                </a>
-
+                                REST · GraphQL · JSON · Webhooks
                             </div>
 
                         </div>
@@ -1693,141 +1822,382 @@
 
 
         <!-- =====================================================
-             RESEARCH
+             AI / ML ARCHITECTURE
         ====================================================== -->
 
-        <section id="research">
+        <section id="ai">
 
             <div class="container">
 
                 <div class="section-header reveal">
 
                     <div class="section-number">
-                        02 / Research
+                        02 / AI Architecture
                     </div>
 
                     <h2 class="section-title">
-                        Research Areas
+                        AI / ML Systems
                     </h2>
 
                     <p class="section-intro">
-                        Research across intelligent, multimodal and robust
-                        machine learning systems.
+                        From intelligent models and AI agents to APIs,
+                        application processing, web systems and external
+                        integrations.
                     </p>
 
                 </div>
 
 
-                <div class="research-grid">
+                <div class="architecture">
 
 
-                    <article class="research-item reveal">
+                    <!-- AI / ML -->
 
-                        <div class="research-index">
-                            01
+                    <div class="architecture-box ai-box reveal">
+
+                        <div class="architecture-subtitle">
+                            Intelligence Layer
                         </div>
 
-                        <h3>
-                            Artificial Intelligence
-                        </h3>
-
-                        <p>
-                            Intelligent systems, machine learning,
-                            deep learning and AI model development.
-                        </p>
-
-                    </article>
-
-
-                    <article class="research-item reveal">
-
-                        <div class="research-index">
-                            02
+                        <div class="architecture-label">
+                            AI / ML SYSTEMS
                         </div>
 
-                        <h3>
-                            Computer Vision
-                        </h3>
+                        <div class="architecture-items">
 
-                        <p>
-                            Image classification, visual recognition,
-                            detection and multimedia understanding.
-                        </p>
+                            <span class="architecture-item">
+                                Generative AI
+                            </span>
 
-                    </article>
+                            <span class="architecture-item">
+                                LLMs
+                            </span>
 
+                            <span class="architecture-item">
+                                RAG
+                            </span>
 
-                    <article class="research-item reveal">
+                            <span class="architecture-item">
+                                AI Agents
+                            </span>
 
-                        <div class="research-index">
-                            03
+                            <span class="architecture-item">
+                                LangGraph
+                            </span>
+
+                            <span class="architecture-item">
+                                Machine Learning
+                            </span>
+
+                            <span class="architecture-item">
+                                Deep Learning
+                            </span>
+
+                            <span class="architecture-item">
+                                Computer Vision
+                            </span>
+
+                            <span class="architecture-item">
+                                XAI
+                            </span>
+
                         </div>
 
-                        <h3>
-                            Adversarial Machine Learning
-                        </h3>
-
-                        <p>
-                            Adversarial attacks, defense mechanisms,
-                            robustness and resilient AI models.
-                        </p>
-
-                    </article>
+                    </div>
 
 
-                    <article class="research-item reveal">
+                    <div class="architecture-connector"></div>
 
-                        <div class="research-index">
-                            04
+
+                    <!-- API -->
+
+                    <div class="architecture-box reveal">
+
+                        <div class="architecture-subtitle">
+                            Service Layer
                         </div>
 
-                        <h3>
-                            Audio-Visual AI
-                        </h3>
-
-                        <p>
-                            Audio classification, audiovisual learning,
-                            clustering and multimodal representation.
-                        </p>
-
-                    </article>
-
-
-                    <article class="research-item reveal">
-
-                        <div class="research-index">
-                            05
+                        <div class="architecture-label">
+                            FAST API LAYER
                         </div>
 
-                        <h3>
-                            Multimedia &amp; Multimodal Learning
-                        </h3>
+                        <div class="architecture-items">
 
-                        <p>
-                            Learning from image, audio, video and
-                            combined representations.
-                        </p>
+                            <span class="architecture-item">
+                                REST
+                            </span>
 
-                    </article>
+                            <span class="architecture-item">
+                                GraphQL
+                            </span>
 
+                            <span class="architecture-item">
+                                JSON
+                            </span>
 
-                    <article class="research-item reveal">
+                            <span class="architecture-item">
+                                Authentication
+                            </span>
 
-                        <div class="research-index">
-                            06
+                            <span class="architecture-item">
+                                Authorization
+                            </span>
+
+                            <span class="architecture-item">
+                                Validation
+                            </span>
+
+                            <span class="architecture-item">
+                                Webhooks
+                            </span>
+
+                            <span class="architecture-item">
+                                Rate Limiting
+                            </span>
+
+                            <span class="architecture-item">
+                                Secure API Design
+                            </span>
+
                         </div>
 
+                    </div>
+
+
+                    <div class="architecture-connector"></div>
+
+
+                    <!-- APPLICATION -->
+
+                    <div class="architecture-box reveal">
+
+                        <div class="architecture-subtitle">
+                            Backend Layer
+                        </div>
+
+                        <div class="architecture-label">
+                            APPLICATION / PROCESSING
+                        </div>
+
+                        <div class="architecture-items">
+
+                            <span class="architecture-item">
+                                Laravel
+                            </span>
+
+                            <span class="architecture-item">
+                                PHP
+                            </span>
+
+                            <span class="architecture-item">
+                                Python
+                            </span>
+
+                            <span class="architecture-item">
+                                Flask
+                            </span>
+
+                            <span class="architecture-item">
+                                Django
+                            </span>
+
+                            <span class="architecture-item">
+                                Business Logic
+                            </span>
+
+                            <span class="architecture-item">
+                                Data Processing
+                            </span>
+
+                            <span class="architecture-item">
+                                Background Jobs
+                            </span>
+
+                            <span class="architecture-item">
+                                Automation
+                            </span>
+
+                            <span class="architecture-item">
+                                Queues
+                            </span>
+
+                            <span class="architecture-item">
+                                External API Integration
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="architecture-connector"></div>
+
+
+                    <!-- THREE SYSTEMS -->
+
+                    <div class="architecture-columns">
+
+
+                        <!-- WEB -->
+
+                        <div class="architecture-box architecture-small reveal">
+
+                            <div class="architecture-subtitle">
+                                Frontend
+                            </div>
+
+                            <div class="architecture-label">
+                                WEB SYSTEMS
+                            </div>
+
+                            <div class="architecture-items">
+
+                                <span class="architecture-item">
+                                    React
+                                </span>
+
+                                <span class="architecture-item">
+                                    JavaScript
+                                </span>
+
+                                <span class="architecture-item">
+                                    HTML
+                                </span>
+
+                                <span class="architecture-item">
+                                    WordPress
+                                </span>
+
+                                <span class="architecture-item">
+                                    WooCommerce
+                                </span>
+
+                                <span class="architecture-item">
+                                    Web Applications
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DATA -->
+
+                        <div class="architecture-box architecture-small reveal">
+
+                            <div class="architecture-subtitle">
+                                Storage
+                            </div>
+
+                            <div class="architecture-label">
+                                DATA
+                            </div>
+
+                            <div class="architecture-items">
+
+                                <span class="architecture-item">
+                                    MySQL
+                                </span>
+
+                                <span class="architecture-item">
+                                    PostgreSQL
+                                </span>
+
+                                <span class="architecture-item">
+                                    SQLite
+                                </span>
+
+                                <span class="architecture-item">
+                                    SQL
+                                </span>
+
+                                <span class="architecture-item">
+                                    ORM
+                                </span>
+
+                                <span class="architecture-item">
+                                    Data Modeling
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EXTERNAL -->
+
+                        <div class="architecture-box architecture-small reveal">
+
+                            <div class="architecture-subtitle">
+                                Integrations
+                            </div>
+
+                            <div class="architecture-label">
+                                EXTERNAL SYSTEMS
+                            </div>
+
+                            <div class="architecture-items">
+
+                                <span class="architecture-item">
+                                    WordPress
+                                </span>
+
+                                <span class="architecture-item">
+                                    WooCommerce
+                                </span>
+
+                                <span class="architecture-item">
+                                    Payment APIs
+                                </span>
+
+                                <span class="architecture-item">
+                                    3rd-party APIs
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AUTOMATION -->
+
+                    <div class="automation-box reveal">
+
                         <h3>
-                            NLP &amp; Generative AI
+                            AUTOMATION &amp; INTEGRATION
                         </h3>
 
-                        <p>
-                            Natural language processing, LLMs, RAG,
-                            prompt engineering and AI automation.
-                        </p>
+                        <div class="architecture-items">
 
-                    </article>
+                            <span class="architecture-item">
+                                BeautifulSoup
+                            </span>
 
+                            <span class="architecture-item">
+                                Web Scraping
+                            </span>
+
+                            <span class="architecture-item">
+                                REST API Integration
+                            </span>
+
+                            <span class="architecture-item">
+                                API Automation
+                            </span>
+
+                            <span class="architecture-item">
+                                JSON
+                            </span>
+
+                            <span class="architecture-item">
+                                Data Extraction
+                            </span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -1838,142 +2208,188 @@
 
 
         <!-- =====================================================
-             EDUCATION
+             TECHNOLOGY STACK
         ====================================================== -->
 
-        <section id="education">
+        <section id="stack">
 
             <div class="container">
 
                 <div class="section-header reveal">
 
                     <div class="section-number">
-                        03 / Education
+                        03 / Technology
                     </div>
 
                     <h2 class="section-title">
-                        Academic Background
+                        Technology Stack
                     </h2>
+
+                    <p class="section-intro">
+                        Technologies and tools used across AI, backend,
+                        web development, APIs, databases and automation.
+                    </p>
 
                 </div>
 
 
-                <div class="education-list">
+                <div class="stack-grid">
 
 
-                    <article class="education-item reveal">
+                    <div class="stack-card reveal">
 
-                        <div class="education-label">
-                            Doctoral Degree
-                        </div>
+                        <h3>
+                            Languages
+                        </h3>
 
-                        <div>
+                        <div class="stack-items">
 
-                            <h3>
-                                Ph.D. in Computer Science
-                            </h3>
-
-                            <div class="education-place">
-                                National Chengchi University ·
-                                Taipei, Taiwan
-                            </div>
-
-                            <p>
-                                <strong>Research Focus:</strong>
-                                Artificial Intelligence, Deep Learning,
-                                Adversarial Machine Learning, Computer Vision,
-                                Multimedia Analysis, Multimodal Learning,
-                                Audio-Visual Understanding, and Robust AI Systems.
-                            </p>
-
-                            <p>
-                                <strong>Dissertation:</strong>
-                                Exploring Adversarial Defense in Multimedia
-                                Classification Systems.
-                            </p>
-
-                            <p>
-                                Research includes Multi-Prototype Metric Learning,
-                                Adversarial Feature Similarity Learning (AFSL),
-                                and Audiovisual Adversarial Clustering (AVAC).
-                            </p>
+                            <span class="stack-item">Python</span>
+                            <span class="stack-item">PHP</span>
+                            <span class="stack-item">JavaScript</span>
+                            <span class="stack-item">C++</span>
 
                         </div>
 
-                    </article>
+                    </div>
 
 
-                    <article class="education-item reveal">
+                    <div class="stack-card reveal">
 
-                        <div class="education-label">
-                            Master's Degree
-                        </div>
+                        <h3>
+                            Backend
+                        </h3>
 
-                        <div>
+                        <div class="stack-items">
 
-                            <h3>
-                                M.Eng. in Information and Communication
-                                Technology for Embedded Systems (ICTES)
-                            </h3>
-
-                            <div class="education-place">
-                                Kasetsart University · Thailand
-                            </div>
-
-                            <p>
-                                <strong>CGPA:</strong>
-                                3.72 / 4.00
-                            </p>
-
-                            <p>
-                                <strong>Thesis:</strong>
-                                Text Detection and Recognition on Traffic
-                                Panels Using Roadside Imagery.
-                            </p>
-
-                            <p>
-                                Developed an AI-based intelligent transportation
-                                system using Python, OpenCV, MSER, SVM, KNN,
-                                and Artificial Neural Networks.
-                            </p>
+                            <span class="stack-item">Laravel</span>
+                            <span class="stack-item">Flask</span>
+                            <span class="stack-item">Django</span>
+                            <span class="stack-item">OOP</span>
 
                         </div>
 
-                    </article>
+                    </div>
 
 
-                    <article class="education-item reveal">
+                    <div class="stack-card reveal">
 
-                        <div class="education-label">
-                            Bachelor's Degree
-                        </div>
+                        <h3>
+                            AI / ML
+                        </h3>
 
-                        <div>
+                        <div class="stack-items">
 
-                            <h3>
-                                B.Sc. in Telecommunication Engineering
-                            </h3>
-
-                            <div class="education-place">
-                                University of Engineering and Technology
-                                (UET) · Peshawar, Pakistan
-                            </div>
-
-                            <p>
-                                <strong>CGPA:</strong>
-                                3.40 / 4.00
-                            </p>
-
-                            <p>
-                                <strong>Final Year Project:</strong>
-                                Design and Implementation of a VoIP-Based PBX
-                                Using the Asterisk Server on Linux Platform.
-                            </p>
+                            <span class="stack-item">Generative AI</span>
+                            <span class="stack-item">LLMs</span>
+                            <span class="stack-item">RAG</span>
+                            <span class="stack-item">AI Agents</span>
+                            <span class="stack-item">LangGraph</span>
+                            <span class="stack-item">LangChain</span>
+                            <span class="stack-item">PyTorch</span>
+                            <span class="stack-item">TensorFlow</span>
+                            <span class="stack-item">OpenCV</span>
 
                         </div>
 
-                    </article>
+                    </div>
 
+
+                    <div class="stack-card reveal">
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <div class="stack-items">
+
+                            <span class="stack-item">WordPress</span>
+                            <span class="stack-item">WooCommerce</span>
+                            <span class="stack-item">HTML</span>
+                            <span class="stack-item">CSS</span>
+                            <span class="stack-item">JavaScript</span>
+                            <span class="stack-item">React</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stack-card reveal">
+
+                        <h3>
+                            APIs &amp; Integration
+                        </h3>
+
+                        <div class="stack-items">
+
+                            <span class="stack-item">REST</span>
+                            <span class="stack-item">GraphQL</span>
+                            <span class="stack-item">JSON</span>
+                            <span class="stack-item">Webhooks</span>
+                            <span class="stack-item">Authentication</span>
+                            <span class="stack-item">API Integration</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stack-card reveal">
+
+                        <h3>
+                            Databases
+                        </h3>
+
+                        <div class="stack-items">
+
+                            <span class="stack-item">MySQL</span>
+                            <span class="stack-item">PostgreSQL</span>
+                            <span class="stack-item">SQLite</span>
+                            <span class="stack-item">SQL</span>
+                            <span class="stack-item">ORM</span>
+                            <span class="stack-item">Data Modeling</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stack-card reveal">
+
+                        <h3>
+                            Automation
+                        </h3>
+
+                        <div class="stack-items">
+
+                            <span class="stack-item">BeautifulSoup</span>
+                            <span class="stack-item">Web Scraping</span>
+                            <span class="stack-item">Data Extraction</span>
+                            <span class="stack-item">API Automation</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stack-card reveal">
+
+                        <h3>
+                            Development Tools
+                        </h3>
+
+                        <div class="stack-items">
+
+                            <span class="stack-item">Git</span>
+                            <span class="stack-item">GitHub</span>
+                            <span class="stack-item">VS Code</span>
+                            <span class="stack-item">Linux</span>
+                            <span class="stack-item">macOS</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -1998,8 +2414,13 @@
                     </div>
 
                     <h2 class="section-title">
-                        Professional Experience
+                        Development Experience
                     </h2>
+
+                    <p class="section-intro">
+                        Practical software development across AI,
+                        backend systems, web platforms and automation.
+                    </p>
 
                 </div>
 
@@ -2007,149 +2428,834 @@
                 <div class="experience-list">
 
 
+                    <!-- AI -->
+
                     <article class="experience-item reveal">
 
                         <div class="experience-date">
-                            2025 – Present
+                            AI DEVELOPMENT
                         </div>
 
                         <div>
 
                             <h3>
-                                Lecturer
+                                AI &amp; Intelligent Systems
                             </h3>
 
                             <div class="experience-place">
-                                Department of Artificial Intelligence ·
-                                The University of Agriculture Swat
+                                AI Applications · Agent Systems · Automation
                             </div>
 
                             <p>
-                                Teaching undergraduate courses including
-                                Programming Fundamentals, Object-Oriented
-                                Programming, Information and Communication
-                                Technology, and Digital Logic Design.
+                                Development of AI-powered applications using
+                                Large Language Models, Generative AI, RAG,
+                                AI Agents and tool-enabled workflows.
                             </p>
 
                             <p>
-                                Conducting research and practical development
-                                in Artificial Intelligence, Machine Learning,
-                                Deep Learning, NLP, Computer Vision,
-                                Multimodal AI, Audio Classification,
-                                and Intelligent Automation.
+                                Working with LangGraph and modern LLM APIs
+                                to build stateful conversational systems,
+                                tool-calling workflows and intelligent
+                                application logic.
                             </p>
 
-                            <p>
-                                Designing AI laboratory exercises,
-                                programming assignments, student projects,
-                                and supervising undergraduate research.
-                            </p>
+                            <div class="experience-tags">
+
+                                <span class="experience-tag">
+                                    Python
+                                </span>
+
+                                <span class="experience-tag">
+                                    LLMs
+                                </span>
+
+                                <span class="experience-tag">
+                                    RAG
+                                </span>
+
+                                <span class="experience-tag">
+                                    LangGraph
+                                </span>
+
+                                <span class="experience-tag">
+                                    AI Agents
+                                </span>
+
+                            </div>
 
                         </div>
 
                     </article>
 
 
+                    <!-- BACKEND -->
+
                     <article class="experience-item reveal">
 
                         <div class="experience-date">
-                            2018 – Present
+                            BACKEND
                         </div>
 
                         <div>
 
                             <h3>
-                                AI &amp; Full-Stack Software Developer
+                                Backend &amp; API Development
                             </h3>
 
                             <div class="experience-place">
-                                Freelance
+                                Python · PHP · Laravel · Flask · Django
                             </div>
 
                             <p>
-                                Design and development of AI-powered applications
-                                using Python, PHP, Laravel, Flask, and modern
-                                web technologies.
+                                Development of backend applications,
+                                business logic, REST APIs, data processing
+                                workflows and external service integrations.
                             </p>
 
                             <p>
-                                Development of applications using Large Language
-                                Models, RAG, NLP, prompt engineering, intelligent
-                                automation, computer vision, OCR, and
-                                classification systems.
+                                Building application services around
+                                authentication, authorization, validation,
+                                JSON-based communication and third-party APIs.
                             </p>
 
-                            <p>
-                                Development and integration of REST APIs,
-                                healthcare information systems, AI assistants,
-                                automation workflows, and secure
-                                data-processing systems.
-                            </p>
+                            <div class="experience-tags">
+
+                                <span class="experience-tag">
+                                    Laravel
+                                </span>
+
+                                <span class="experience-tag">
+                                    PHP
+                                </span>
+
+                                <span class="experience-tag">
+                                    Python
+                                </span>
+
+                                <span class="experience-tag">
+                                    Flask
+                                </span>
+
+                                <span class="experience-tag">
+                                    Django
+                                </span>
+
+                                <span class="experience-tag">
+                                    REST APIs
+                                </span>
+
+                            </div>
 
                         </div>
 
                     </article>
 
 
+                    <!-- WORDPRESS -->
+
                     <article class="experience-item reveal">
 
                         <div class="experience-date">
-                            2015 – 2017
+                            WEB DEVELOPMENT
                         </div>
 
                         <div>
 
                             <h3>
-                                Teaching Assistant
+                                WordPress &amp; WooCommerce Development
                             </h3>
 
                             <div class="experience-place">
-                                Sirindhorn International Institute of Technology,
-                                Thammasat University, Thailand
+                                WordPress · WooCommerce · PHP · APIs
                             </div>
 
                             <p>
-                                Assisted in teaching Python programming,
-                                MATLAB, engineering laboratories, practical
-                                programming sessions, student projects,
-                                and course assessment.
+                                Development and customization of WordPress
+                                and WooCommerce systems, including custom
+                                functionality, business workflows,
+                                integrations and API-driven features.
                             </p>
+
+                            <p>
+                                Working with custom post types, metadata,
+                                plugins, membership systems, payment
+                                integrations and external services.
+                            </p>
+
+                            <div class="experience-tags">
+
+                                <span class="experience-tag">
+                                    WordPress
+                                </span>
+
+                                <span class="experience-tag">
+                                    WooCommerce
+                                </span>
+
+                                <span class="experience-tag">
+                                    PHP
+                                </span>
+
+                                <span class="experience-tag">
+                                    REST API
+                                </span>
+
+                                <span class="experience-tag">
+                                    ACF
+                                </span>
+
+                            </div>
 
                         </div>
 
                     </article>
 
 
+                    <!-- AUTOMATION -->
+
                     <article class="experience-item reveal">
 
                         <div class="experience-date">
-                            2012 – 2015
+                            AUTOMATION
                         </div>
 
                         <div>
 
                             <h3>
-                                Operations &amp; Maintenance Engineer
+                                Automation &amp; Data Processing
                             </h3>
 
                             <div class="experience-place">
-                                Saudi Telecom Company (STC) /
-                                Alcatel-Lucent telecommunications project ·
+                                Python · BeautifulSoup · APIs
+                            </div>
+
+                            <p>
+                                Development of automation workflows for
+                                data extraction, web scraping, API
+                                communication and structured data processing.
+                            </p>
+
+                            <p>
+                                Building practical tools that connect
+                                external services with application logic
+                                and automated processing pipelines.
+                            </p>
+
+                            <div class="experience-tags">
+
+                                <span class="experience-tag">
+                                    BeautifulSoup
+                                </span>
+
+                                <span class="experience-tag">
+                                    Web Scraping
+                                </span>
+
+                                <span class="experience-tag">
+                                    JSON
+                                </span>
+
+                                <span class="experience-tag">
+                                    API Automation
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- EARLIER TECHNICAL -->
+
+                    <article class="experience-item reveal">
+
+                        <div class="experience-date">
+                            EARLIER EXPERIENCE
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Telecommunications &amp; Network Engineering
+                            </h3>
+
+                            <div class="experience-place">
                                 Saudi Arabia
                             </div>
 
                             <p>
-                                Worked with telecommunications infrastructure
-                                involving Alcatel-Lucent, Nokia, and Huawei
-                                equipment.
+                                Earlier engineering experience involving
+                                telecommunications infrastructure,
+                                network systems, installation, integration,
+                                testing, troubleshooting and technical
+                                operations.
                             </p>
 
+                            <div class="experience-tags">
+
+                                <span class="experience-tag">
+                                    TCP/IP
+                                </span>
+
+                                <span class="experience-tag">
+                                    Networking
+                                </span>
+
+                                <span class="experience-tag">
+                                    Infrastructure
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        05 / Projects
+                    </div>
+
+                    <h2 class="section-title">
+                        Selected Projects
+                    </h2>
+
+                    <p class="section-intro">
+                        Practical systems spanning AI agents, backend
+                        development, web platforms, APIs and automation.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROJECT 01 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <h3>
+                            AI Agent with LangGraph
+                        </h3>
+
+                        <p>
+                            Python-based AI agent architecture using
+                            LangGraph, LLMs, conversation state and
+                            tool integration for multi-step intelligent
+                            workflows.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Python
+                            </span>
+
+                            <span class="project-tag">
+                                LangGraph
+                            </span>
+
+                            <span class="project-tag">
+                                LLM
+                            </span>
+
+                            <span class="project-tag">
+                                AI Agents
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Flask Authentication System
+                        </h3>
+
+                        <p>
+                            Lightweight Flask application implementing
+                            user registration, login, password validation,
+                            sessions, SQLite and object-oriented application
+                            structure.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Python
+                            </span>
+
+                            <span class="project-tag">
+                                Flask
+                            </span>
+
+                            <span class="project-tag">
+                                SQLite
+                            </span>
+
+                            <span class="project-tag">
+                                OOP
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <h3>
+                            WordPress &amp; WooCommerce Systems
+                        </h3>
+
+                        <p>
+                            Custom WordPress and WooCommerce development
+                            involving APIs, custom functionality,
+                            membership workflows, data integration and
+                            business automation.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                WordPress
+                            </span>
+
+                            <span class="project-tag">
+                                WooCommerce
+                            </span>
+
+                            <span class="project-tag">
+                                PHP
+                            </span>
+
+                            <span class="project-tag">
+                                REST API
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+                        <h3>
+                            AI &amp; API Integration
+                        </h3>
+
+                        <p>
+                            Backend workflows connecting AI services,
+                            external APIs and application logic to create
+                            intelligent data-processing and automation
+                            systems.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Python
+                            </span>
+
+                            <span class="project-tag">
+                                REST
+                            </span>
+
+                            <span class="project-tag">
+                                JSON
+                            </span>
+
+                            <span class="project-tag">
+                                LLMs
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 05 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Web Scraping &amp; Automation
+                        </h3>
+
+                        <p>
+                            Python-based data extraction and automation
+                            workflows using BeautifulSoup, APIs and
+                            structured data processing.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Python
+                            </span>
+
+                            <span class="project-tag">
+                                BeautifulSoup
+                            </span>
+
+                            <span class="project-tag">
+                                Web Scraping
+                            </span>
+
+                            <span class="project-tag">
+                                Automation
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 06 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Intelligent Computer Vision Systems
+                        </h3>
+
+                        <p>
+                            AI and computer vision systems involving image
+                            processing, classification, multimodal learning,
+                            deep learning and robust machine learning.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Python
+                            </span>
+
+                            <span class="project-tag">
+                                OpenCV
+                            </span>
+
+                            <span class="project-tag">
+                                Deep Learning
+                            </span>
+
+                            <span class="project-tag">
+                                Computer Vision
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RESEARCH
+        ====================================================== -->
+
+        <section id="research">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        06 / Research
+                    </div>
+
+                    <h2 class="section-title">
+                        AI Research Background
+                    </h2>
+
+                    <p class="section-intro">
+                        Research experience supporting work in AI,
+                        computer vision, multimodal systems and robust
+                        machine learning.
+                    </p>
+
+                </div>
+
+
+                <div class="research-grid">
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            01
+                        </div>
+
+                        <h3>
+                            Computer Vision
+                        </h3>
+
+                        <p>
+                            Image classification, visual recognition,
+                            detection and multimedia understanding.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            02
+                        </div>
+
+                        <h3>
+                            Deep Learning
+                        </h3>
+
+                        <p>
+                            Neural networks, representation learning,
+                            model development and evaluation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            03
+                        </div>
+
+                        <h3>
+                            Adversarial ML
+                        </h3>
+
+                        <p>
+                            Adversarial attacks, defense mechanisms,
+                            robustness and resilient AI models.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            04
+                        </div>
+
+                        <h3>
+                            Multimodal AI
+                        </h3>
+
+                        <p>
+                            Learning from image, audio, video and
+                            combined multimodal representations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            05
+                        </div>
+
+                        <h3>
+                            Audio-Visual AI
+                        </h3>
+
+                        <p>
+                            Audio classification, audiovisual learning,
+                            clustering and multimodal understanding.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-item reveal">
+
+                        <div class="research-index">
+                            06
+                        </div>
+
+                        <h3>
+                            Generative AI
+                        </h3>
+
+                        <p>
+                            LLMs, RAG, natural language processing,
+                            AI agents and intelligent automation.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BACKGROUND
+        ====================================================== -->
+
+        <section id="background">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        07 / Background
+                    </div>
+
+                    <h2 class="section-title">
+                        Technical Background
+                    </h2>
+
+                    <p class="section-intro">
+                        Academic and engineering background supporting
+                        my work in AI and software development.
+                    </p>
+
+                </div>
+
+
+                <div class="background-list">
+
+
+                    <article class="background-item reveal">
+
+                        <div class="background-type">
+                            Doctoral
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Ph.D. in Computer Science
+                            </h3>
+
+                            <div class="background-place">
+                                National Chengchi University · Taiwan
+                            </div>
+
                             <p>
-                                Responsibilities included installation,
-                                integration, testing, operation, maintenance,
-                                troubleshooting, network optimization,
-                                technical documentation, and field
-                                engineering support.
+                                Research in Artificial Intelligence,
+                                Deep Learning, Adversarial Machine Learning,
+                                Computer Vision, Multimedia and Robust AI.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="background-item reveal">
+
+                        <div class="background-type">
+                            Master's
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                M.Eng. in Information and Communication
+                                Technology for Embedded Systems
+                            </h3>
+
+                            <div class="background-place">
+                                Kasetsart University · Thailand
+                            </div>
+
+                            <p>
+                                AI-based intelligent transportation systems,
+                                computer vision and image processing.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="background-item reveal">
+
+                        <div class="background-type">
+                            Engineering
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                B.Sc. in Telecommunication Engineering
+                            </h3>
+
+                            <div class="background-place">
+                                University of Engineering and Technology · Peshawar
+                            </div>
+
+                            <p>
+                                Telecommunications, networking, Linux systems
+                                and VoIP infrastructure.
                             </p>
 
                         </div>
@@ -2166,7 +3272,7 @@
 
 
         <!-- =====================================================
-             PUBLICATIONS
+             SELECTED RESEARCH
         ====================================================== -->
 
         <section id="publications">
@@ -2176,17 +3282,17 @@
                 <div class="section-header reveal">
 
                     <div class="section-number">
-                        05 / Publications
+                        08 / Selected Research
                     </div>
 
                     <h2 class="section-title">
-                        Selected Publications
+                        Research Publications
                     </h2>
 
                     <p class="section-intro">
-                        Research publications covering adversarial machine
-                        learning, multimedia analysis, multimodal learning,
-                        computer vision, and machine learning.
+                        Selected publications from work in adversarial
+                        machine learning, multimedia AI, computer vision
+                        and multimodal systems.
                     </p>
 
                 </div>
@@ -2343,376 +3449,19 @@
                     </article>
 
 
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            07
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                F. Ghaffar, S. Khan, B. Uyyanonvara,
-                                C. Sinthanayothin, and H. Kaneko,
-                                "Detection of Diabetic Anomalies in Retinal
-                                Images Using Morphological Cascading Decision Tree."
-                            </div>
-
-                            <div class="publication-meta">
-                                arXiv preprint arXiv:2001.01953, 2020.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            08
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan and N. Sadiq,
-                                "Design and Configuration of VoIP Based PBX
-                                Using Asterisk Server and OPNET Platform."
-                            </div>
-
-                            <div class="publication-meta">
-                                2017 International Electrical Engineering
-                                Congress (iEECON), IEEE, 2017, pp. 1–4.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            09
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, S. Thainimit, I. Kumazawa,
-                                and S. Marukatat,
-                                "Text Detection and Recognition on Traffic
-                                Panel in Roadside Imagery."
-                            </div>
-
-                            <div class="publication-meta">
-                                2017 International Conference of Information
-                                and Communication Technology for Embedded
-                                Systems (IC-ICTES), IEEE, 2017, pp. 1–6.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            10
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, S. Thainimit, I. Kumazawa,
-                                S. Marukatat, and F. Ghaffar,
-                                "Character Segmentation on Traffic Panels
-                                Using Visual Appearance from Roadside Imagery."
-                            </div>
-
-                            <div class="publication-meta">
-                                Third Asian Conference on Defence Technology
-                                (ACDT), 2017, pp. 65–69.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             SKILLS
-        ====================================================== -->
-
-        <section id="skills">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="section-number">
-                        06 / Expertise
-                    </div>
-
-                    <h2 class="section-title">
-                        Technical Expertise
-                    </h2>
-
                 </div>
 
 
-                <div class="skills-list">
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Artificial Intelligence
-                        </h3>
-
-                        <p>
-                            Deep Learning, Machine Learning, LLMs, RAG,
-                            NLP, Computer Vision, Adversarial ML,
-                            AI Model Development, AI Automation
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Programming
-                        </h3>
-
-                        <p>
-                            Python, PHP, C, C++, Java, MATLAB,
-                            Verilog HDL, FPGA Programming
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            AI Frameworks
-                        </h3>
-
-                        <p>
-                            TensorFlow, Keras, PyTorch, Scikit-learn,
-                            NumPy, Pandas, OpenCV, Hugging Face,
-                            LangChain, OpenAI API
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Software Engineering
-                        </h3>
-
-                        <p>
-                            REST APIs, JSON, OAuth, Microservices,
-                            OOP, Software Architecture, Design Patterns,
-                            Git and GitHub
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Web Technologies
-                        </h3>
-
-                        <p>
-                            Laravel, Flask, FastAPI, WordPress,
-                            WooCommerce, HTML5, CSS3, JavaScript,
-                            Bootstrap
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Data Science
-                        </h3>
-
-                        <p>
-                            Data Collection, Data Cleaning, Feature Engineering,
-                            Visualization, Model Training, Evaluation,
-                            and Hyperparameter Optimization
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Cloud &amp; DevOps
-                        </h3>
-
-                        <p>
-                            Docker, Linux, GCP, Microsoft Azure,
-                            AWS, CI/CD, and MLOps
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill reveal">
-
-                        <h3>
-                            Databases &amp; Networking
-                        </h3>
-
-                        <p>
-                            MySQL, SQLite, PostgreSQL, Database Design,
-                            TCP/IP, Network Security, and CCNA
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             AWARDS
-        ====================================================== -->
-
-        <section id="awards">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="section-number">
-                        07 / Recognition
-                    </div>
-
-                    <h2 class="section-title">
-                        Scholarships &amp; Certifications
-                    </h2>
-
-                </div>
-
-
-                <div class="awards-list">
-
-
-                    <article class="award reveal">
-
-                        <div class="award-type">
-                            Scholarship
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Taiwan International Graduate Program
-                            </h3>
-
-                            <p>
-                                Fully funded international Ph.D. scholarship
-                                for doctoral research at National Chengchi
-                                University, Taiwan.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="award reveal">
-
-                        <div class="award-type">
-                            Scholarship
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Graduate Scholarship for Master of Engineering
-                            </h3>
-
-                            <p>
-                                Graduate scholarship awarded by Kasetsart
-                                University, Thailand, for the M.Eng. ICTES program.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="award reveal">
-
-                        <div class="award-type">
-                            Professional Training
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Machine Learning Summer School (MLSS)
-                            </h3>
-
-                            <p>
-                                Advanced training covering machine learning,
-                                deep learning, computer vision, NLP,
-                                reinforcement learning, and AI research.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="award reveal">
-
-                        <div class="award-type">
-                            Professional Certification
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Cisco Certified Network Associate
-                            </h3>
-
-                            <p>
-                                Certification covering networking, routing
-                                and switching, TCP/IP, network security,
-                                and network administration.
-                            </p>
-
-                        </div>
-
-                    </article>
-
+                <div style="margin-top: 30px;">
+
+                    <a
+                        class="button button-outline"
+                        href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Full Research Profile
+                    </a>
 
                 </div>
 
@@ -2735,12 +3484,13 @@
                     <div>
 
                         <h2>
-                            Let's Connect
+                            Let's Build Something
                         </h2>
 
                         <p>
-                            For academic, research, teaching, or
-                            professional inquiries.
+                            Interested in AI systems, software development,
+                            APIs, automation or intelligent applications?
+                            Let's connect.
                         </p>
 
                         <a
@@ -2757,19 +3507,19 @@
 
                         <a
                             class="button button-primary"
-                            href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="mailto:sarwar@uoas.edu.pk"
                         >
-                            Google Scholar
+                            Send Email
                         </a>
 
 
                         <a
                             class="button button-outline"
-                            href="mailto:sarwar@uoas.edu.pk"
+                            href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Send Email
+                            Research Profile
                         </a>
 
                     </div>
@@ -2800,7 +3550,7 @@
                 </p>
 
                 <p>
-                    The University of Agriculture Swat
+                    AI · Software · APIs · Web · Automation
                 </p>
 
             </div>
@@ -2820,8 +3570,12 @@
        MOBILE MENU
     ========================================================= */
 
-    const mobileMenu = document.getElementById("mobileMenu");
-    const navigation = document.getElementById("navigation");
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const navigation =
+        document.getElementById("navigation");
+
 
     mobileMenu.addEventListener("click", function () {
 
@@ -2834,23 +3588,29 @@
        CLOSE MOBILE MENU AFTER CLICK
     ========================================================= */
 
-    document.querySelectorAll(".navigation a").forEach(function (link) {
+    document
+        .querySelectorAll(".navigation a")
+        .forEach(function (link) {
 
-        link.addEventListener("click", function () {
+            link.addEventListener("click", function () {
 
-            navigation.classList.remove("open");
+                navigation.classList.remove("open");
+
+            });
 
         });
-
-    });
 
 
     /* =========================================================
        ACTIVE NAVIGATION TAB
     ========================================================= */
 
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".navigation a");
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navLinks =
+        document.querySelectorAll(".navigation a");
+
 
     function updateActiveNavigation() {
 
@@ -2858,27 +3618,41 @@
 
         sections.forEach(function (section) {
 
-            const sectionTop = section.offsetTop - 150;
+            const sectionTop =
+                section.offsetTop - 150;
 
             if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
+
+                current =
+                    section.getAttribute("id");
+
             }
 
         });
+
 
         navLinks.forEach(function (link) {
 
             link.classList.remove("active");
 
-            if (link.getAttribute("href") === "#" + current) {
+            if (
+                link.getAttribute("href") ===
+                "#" + current
+            ) {
+
                 link.classList.add("active");
+
             }
 
         });
 
     }
 
-    window.addEventListener("scroll", updateActiveNavigation);
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNavigation
+    );
 
     updateActiveNavigation();
 
@@ -2890,6 +3664,7 @@
     const revealElements =
         document.querySelectorAll(".reveal");
 
+
     const revealObserver =
         new IntersectionObserver(
 
@@ -2899,9 +3674,13 @@
 
                     if (entry.isIntersecting) {
 
-                        entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-                        observer.unobserve(entry.target);
+                        observer.unobserve(
+                            entry.target
+                        );
 
                     }
 
@@ -2921,7 +3700,6 @@
         revealObserver.observe(element);
 
     });
-
 
 </script>
 
