@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,20 +9,26 @@
     <title>Sarwar Khan | AI & Software Developer</title>
 
     <meta name="description"
-        content="Sarwar Khan — AI and software developer working with Python, PHP, Laravel, Flask, Django, WordPress, APIs, Generative AI, LLMs, AI Agents, LangGraph and intelligent automation.">
+        content="Sarwar Khan — AI and Software Developer specializing in AI agents, backend systems, APIs, web applications and automation.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
         rel="stylesheet">
 
     <style>
-
-        /* =========================================================
-           RESET
-        ========================================================= */
+        :root {
+            --navy: #102a56;
+            --blue: #1769e0;
+            --blue-light: #eaf3ff;
+            --text: #172033;
+            --muted: #687386;
+            --light: #f7f9fc;
+            --border: #e5e9ef;
+            --white: #ffffff;
+        }
 
         * {
             margin: 0;
@@ -35,1645 +42,765 @@
 
         body {
             font-family: "DM Sans", sans-serif;
-            background: #ffffff;
-            color: #172033;
+            color: var(--text);
+            background: var(--white);
             line-height: 1.7;
-            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Manrope", sans-serif;
+            line-height: 1.2;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
-        }
-
-        ::selection {
-            background: #dcecff;
-            color: #102a56;
-        }
-
-
-        /* =========================================================
-           VARIABLES
-        ========================================================= */
-
-        :root {
-            --navy: #102a56;
-            --blue: #1769e0;
-            --blue-light: #eaf3ff;
-
-            --text: #172033;
-            --muted: #687386;
-            --light: #f7f9fc;
-
-            --border: #e5e9ef;
-            --border-dark: #d8dee8;
-
-            --white: #ffffff;
-
-            --radius: 14px;
-        }
-
-
-        /* =========================================================
-           PAGE
-        ========================================================= */
-
-        .page {
-            min-height: 100vh;
-        }
-
-
-        /* =========================================================
-           TOP HEADER
-        ========================================================= */
-
-        .topbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-
-            height: 76px;
-
-            background: rgba(255, 255, 255, 0.94);
-            border-bottom: 1px solid rgba(229, 233, 239, 0.9);
-
-            backdrop-filter: blur(15px);
-
-            z-index: 1000;
-        }
-
-        .topbar-inner {
-            width: min(1380px, calc(100% - 48px));
-            height: 100%;
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-
-        /* =========================================================
-           NAME
-        ========================================================= */
-
-        .site-name {
-            font-family: "Manrope", sans-serif;
-
-            font-size: 21px;
-            font-weight: 800;
-
-            letter-spacing: -0.6px;
-
-            color: var(--navy);
-
-            white-space: nowrap;
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
-
-        .navigation {
-            display: flex;
-            align-items: center;
-
-            gap: 4px;
-        }
-
-        .navigation a {
-            position: relative;
-
-            padding: 9px 13px;
-
-            color: #657084;
-
-            font-size: 13px;
-            font-weight: 600;
-
-            white-space: nowrap;
-
-            transition:
-                color 0.25s ease,
-                background 0.25s ease;
-        }
-
-        .navigation a::after {
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-            bottom: 1px;
-
-            width: 0;
-            height: 2px;
-
-            background: var(--blue);
-
-            transform: translateX(-50%);
-
-            transition:
-                width 0.3s cubic-bezier(.4, 0, .2, 1);
-        }
-
-        .navigation a:hover {
-            color: var(--navy);
-        }
-
-        .navigation a:hover::after,
-        .navigation a.active::after {
-            width: 70%;
-        }
-
-        .navigation a.active {
-            color: var(--navy);
-        }
-
-
-        /* =========================================================
-           MAIN
-        ========================================================= */
-
-        main {
-            padding-top: 76px;
+            color: inherit;
         }
 
         .container {
-            width: min(1180px, calc(100% - 48px));
+            width: min(1120px, calc(100% - 40px));
             margin: auto;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 76px;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
 
-        .hero {
-            min-height: calc(100vh - 76px);
-
+        .nav {
+            height: 76px;
             display: flex;
             align-items: center;
-
-            border-bottom: 1px solid var(--border);
+            justify-content: space-between;
         }
 
-        .hero-inner {
-            width: 100%;
+        .logo {
+            font-family: "Manrope", sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--navy);
+        }
 
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 300px;
+        .logo span {
+            color: var(--blue);
+        }
 
-            gap: 90px;
-
+        .nav-links {
+            display: flex;
             align-items: center;
-
-            padding: 100px 0;
+            gap: 28px;
+            list-style: none;
         }
 
-        .hero-kicker {
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--muted);
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--blue);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 27px;
+            cursor: pointer;
+            color: var(--navy);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 155px 0 100px;
+            background:
+                linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #f7f9fc 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 9px;
-
-            margin-bottom: 23px;
-
+            gap: 8px;
             color: var(--blue);
-
-            font-size: 12px;
+            background: var(--blue-light);
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: 700;
-
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
+            margin-bottom: 22px;
         }
 
-        .hero-kicker::before {
+        .eyebrow::before {
             content: "";
-
-            width: 28px;
-            height: 2px;
-
+            width: 7px;
+            height: 7px;
             background: var(--blue);
+            border-radius: 50%;
         }
 
         .hero h1 {
-            font-family: "Manrope", sans-serif;
-
-            font-size: clamp(48px, 7vw, 86px);
-
-            line-height: 1.02;
-
-            letter-spacing: -4px;
-
+            font-size: clamp(44px, 6vw, 72px);
             color: var(--navy);
-
-            margin-bottom: 22px;
-
-            white-space: nowrap;
+            letter-spacing: -2.5px;
+            margin-bottom: 20px;
         }
 
-        .hero-title {
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero-subtitle {
             font-family: "Manrope", sans-serif;
-
-            font-size: 23px;
+            font-size: 20px;
             font-weight: 700;
-
-            color: #253650;
-
-            margin-bottom: 10px;
+            color: var(--navy);
+            margin-bottom: 15px;
         }
 
-        .hero-institution {
+        .hero-text {
+            max-width: 650px;
             color: var(--muted);
-
-            font-size: 14px;
-
-            margin-bottom: 27px;
-        }
-
-        .hero-description {
-            max-width: 760px;
-
-            color: #596579;
-
             font-size: 17px;
-
-            line-height: 1.9;
-
-            margin-bottom: 32px;
+            margin-bottom: 30px;
         }
 
-        .hero-actions {
+        .hero-buttons {
             display: flex;
-            align-items: center;
-
+            gap: 12px;
             flex-wrap: wrap;
-
-            gap: 11px;
         }
 
-
-        /* =========================================================
-           BUTTONS
-        ========================================================= */
-
-        .button {
+        .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
-            min-height: 43px;
-
-            padding: 0 18px;
-
+            padding: 12px 20px;
             border-radius: 8px;
-
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
+            transition: 0.25s;
         }
 
-        .button-primary {
-            background: var(--navy);
+        .btn-primary {
             color: white;
-
-            box-shadow: 0 7px 20px rgba(16, 42, 86, 0.12);
+            background: var(--blue);
         }
 
-        .button-primary:hover {
+        .btn-primary:hover {
             transform: translateY(-2px);
-
-            background: #173a75;
-
-            box-shadow: 0 12px 25px rgba(16, 42, 86, 0.18);
         }
 
-        .button-outline {
+        .btn-secondary {
+            color: var(--navy);
             background: white;
-
-            border: 1px solid var(--border-dark);
-
-            color: #34435a;
+            border: 1px solid var(--border);
         }
 
-        .button-outline:hover {
-            transform: translateY(-2px);
-
-            border-color: #a9c8f5;
-
-            background: #f7fbff;
+        .btn-secondary:hover {
+            border-color: var(--blue);
+            color: var(--blue);
         }
 
-
-        /* =========================================================
-           HERO PROFILE
-        ========================================================= */
-
-        .hero-profile {
-            position: relative;
-
+        .hero-image {
             display: flex;
             justify-content: center;
         }
 
         .profile-frame {
-            width: 245px;
-            height: 300px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            background: #ffffff;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            position: relative;
-
+            width: 300px;
+            height: 360px;
+            border-radius: 18px;
             overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--light);
         }
 
         .profile-frame img {
             width: 100%;
             height: 100%;
-
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
-
-            display: block;
         }
 
-
-        /* =========================================================
-           SECTION
-        ========================================================= */
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
-            padding: 110px 0;
-
-            border-bottom: 1px solid var(--border);
-
-            scroll-margin-top: 76px;
+            padding: 100px 0;
         }
 
         .section-header {
-            margin-bottom: 48px;
+            max-width: 700px;
+            margin-bottom: 50px;
         }
 
-        .section-number {
+        .section-label {
             color: var(--blue);
-
-            font-size: 11px;
+            font-size: 13px;
             font-weight: 800;
-
-            letter-spacing: 1.8px;
-
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-
             margin-bottom: 10px;
         }
 
-        .section-title {
-            font-family: "Manrope", sans-serif;
-
+        .section-header h2 {
             color: var(--navy);
-
-            font-size: 38px;
-
-            line-height: 1.2;
-
-            letter-spacing: -1.5px;
-
-            margin-bottom: 13px;
+            font-size: clamp(30px, 4vw, 43px);
+            letter-spacing: -1px;
+            margin-bottom: 14px;
         }
 
-        .section-intro {
-            max-width: 760px;
-
+        .section-header p {
             color: var(--muted);
-
-            font-size: 15px;
-        }
-
-
-        /* =========================================================
-           ABOUT
-        ========================================================= */
-
-        .about-layout {
-            display: grid;
-
-            grid-template-columns: 1.4fr 0.8fr;
-
-            gap: 80px;
-        }
-
-        .about-copy p {
-            color: #566276;
-
             font-size: 16px;
-
-            margin-bottom: 20px;
         }
 
-        .about-copy p:last-child {
-            margin-bottom: 0;
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--light);
         }
 
-        .facts {
-            border-top: 1px solid var(--border);
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
         }
 
-        .fact {
-            padding: 17px 0;
-
-            border-bottom: 1px solid var(--border);
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
         }
 
-        .fact-label {
-            color: #8791a2;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 0.8px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 4px;
+        .about-points {
+            display: grid;
+            gap: 14px;
         }
 
-        .fact-value {
-            color: #29384f;
+        .about-point {
+            padding: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
 
+        .about-point h3 {
+            color: var(--navy);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .about-point p {
+            color: var(--muted);
             font-size: 14px;
-            font-weight: 600;
         }
 
-        .fact-value a {
-            color: var(--blue);
-        }
-
-
-        /* =========================================================
-           AI / ML ARCHITECTURE
-        ========================================================= */
+        /* =========================
+           ARCHITECTURE
+        ========================= */
 
         .architecture {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: white;
+        }
 
-            width: 100%;
+        .architecture-flow {
+            max-width: 950px;
+            margin: auto;
         }
 
         .architecture-box {
-            width: 100%;
-
-            padding: 32px 35px;
-
             border: 1px solid var(--border);
-
             border-radius: 14px;
-
-            background: #ffffff;
-
+            background: white;
+            padding: 25px 30px;
+            box-shadow: 0 8px 30px rgba(16, 42, 86, 0.05);
             text-align: center;
-
-            position: relative;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
         }
 
-        .architecture-box:hover {
-            transform: translateY(-4px);
-
-            border-color: #cbd9ec;
-
-            box-shadow: 0 18px 40px rgba(24, 48, 82, 0.07);
+        .architecture-box.main {
+            border-color: #cddff9;
+            background: #fbfdff;
         }
 
-        .architecture-box.ai-box {
-            background: linear-gradient(
-                135deg,
-                #fbfdff,
-                #f4f8ff
-            );
-        }
-
-        .architecture-label {
-            font-family: "Manrope", sans-serif;
-
+        .architecture-box h3 {
             color: var(--navy);
-
-            font-size: 20px;
-            font-weight: 800;
-
-            letter-spacing: -0.5px;
-
-            margin-bottom: 16px;
+            font-size: 21px;
+            margin-bottom: 14px;
         }
 
-        .architecture-subtitle {
+        .architecture-box.main h3 {
             color: var(--blue);
-
-            font-size: 11px;
-            font-weight: 800;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.5px;
-
-            margin-bottom: 15px;
         }
 
-        .architecture-items {
+        .architecture-box p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .chips {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-
             gap: 8px;
         }
 
-        .architecture-item {
-            padding: 7px 12px;
-
-            border: 1px solid #dfe6ef;
-
-            border-radius: 7px;
-
-            background: #ffffff;
-
-            color: #536176;
-
+        .chip {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            color: var(--text);
             font-size: 12px;
             font-weight: 600;
         }
 
-        .architecture-connector {
-            width: 1px;
-            height: 42px;
-
-            background: #cfd8e5;
-
-            position: relative;
-        }
-
-        .architecture-connector::after {
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-            bottom: -1px;
-
-            width: 7px;
-            height: 7px;
-
-            border-right: 1px solid #aab7c8;
-            border-bottom: 1px solid #aab7c8;
-
-            transform: translateX(-50%) rotate(45deg);
+        .arrow {
+            text-align: center;
+            font-size: 26px;
+            line-height: 45px;
+            color: #a5b4c7;
         }
 
         .architecture-columns {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
-            gap: 16px;
-
-            width: 100%;
+            gap: 15px;
         }
 
-        .architecture-small {
-            min-height: 205px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+        .architecture-columns .architecture-box {
+            min-height: 185px;
         }
 
-        .architecture-small .architecture-label {
-            font-size: 17px;
-        }
-
-
-        /* =========================================================
-           AUTOMATION
-        ========================================================= */
-
-        .automation-box {
-            margin-top: 16px;
-
-            width: 100%;
-
-            padding: 27px 30px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 14px;
-
-            background: #fbfcfe;
-
-            text-align: center;
-        }
-
-        .automation-box h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 18px;
-
-            margin-bottom: 13px;
-        }
-
-
-        /* =========================================================
-           EXPERIENCE
-        ========================================================= */
-
-        .experience-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .experience-item {
-            display: grid;
-
-            grid-template-columns: 210px 1fr;
-
-            gap: 55px;
-
-            padding: 37px 0;
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .experience-date {
-            color: var(--blue);
-
-            font-size: 12px;
-            font-weight: 700;
-
-            letter-spacing: 0.4px;
-        }
-
-        .experience-item h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 21px;
-
-            margin-bottom: 4px;
-        }
-
-        .experience-place {
-            color: #53647c;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            margin-bottom: 15px;
-        }
-
-        .experience-item p {
-            color: var(--muted);
-
-            font-size: 14px;
-
-            margin-bottom: 8px;
-        }
-
-        .experience-tags {
-            display: flex;
-            flex-wrap: wrap;
-
-            gap: 7px;
-
-            margin-top: 17px;
-        }
-
-        .experience-tag {
-            padding: 5px 9px;
-
-            border: 1px solid #dce4ee;
-
-            border-radius: 6px;
-
-            background: #fafcff;
-
-            color: #526177;
-
-            font-size: 11px;
-            font-weight: 700;
-        }
-
-
-        /* =========================================================
+        /* =========================
            PROJECTS
-        ========================================================= */
+        ========================= */
+
+        .projects {
+            background: var(--light);
+        }
 
         .projects-grid {
             display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            border-top: 1px solid var(--border);
-            border-left: 1px solid var(--border);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .project-card {
-            min-height: 275px;
-
-            padding: 32px;
-
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-
-            background: #ffffff;
-
-            transition:
-                transform 0.3s ease,
-                background 0.3s ease,
-                box-shadow 0.3s ease;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.25s;
         }
 
         .project-card:hover {
-            background: #fbfdff;
-
             transform: translateY(-4px);
-
-            box-shadow: 0 18px 40px rgba(24, 48, 82, 0.06);
+            border-color: #cbdcf4;
+            box-shadow: 0 12px 35px rgba(16, 42, 86, 0.07);
         }
 
         .project-number {
-            color: #9ca7b7;
-
             font-family: "Manrope", sans-serif;
-
-            font-size: 12px;
-            font-weight: 700;
-
-            margin-bottom: 22px;
+            color: #b4c0d0;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 18px;
         }
 
         .project-card h3 {
-            font-family: "Manrope", sans-serif;
-
             color: var(--navy);
-
             font-size: 20px;
-
             margin-bottom: 10px;
         }
 
         .project-card p {
             color: var(--muted);
-
-            font-size: 13px;
-
-            margin-bottom: 20px;
+            font-size: 14px;
+            margin-bottom: 18px;
         }
 
         .project-tags {
             display: flex;
-            flex-wrap: wrap;
-
             gap: 7px;
-        }
-
-        .project-tag {
-            padding: 5px 9px;
-
-            border-radius: 6px;
-
-            background: var(--blue-light);
-
-            color: #315b93;
-
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-
-        /* =========================================================
-           TECHNOLOGY STACK
-        ========================================================= */
-
-        .stack-grid {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            border-top: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-        }
-
-        .stack-card {
-            padding: 29px;
-
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-
-            background: white;
-
-            transition:
-                background 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .stack-card:hover {
-            background: #fbfdff;
-
-            transform: translateY(-3px);
-        }
-
-        .stack-card h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 17px;
-
-            margin-bottom: 13px;
-        }
-
-        .stack-items {
-            display: flex;
             flex-wrap: wrap;
-
-            gap: 7px;
         }
 
-        .stack-item {
-            padding: 6px 10px;
-
-            border: 1px solid #dce4ee;
-
-            border-radius: 6px;
-
-            background: #ffffff;
-
-            color: #56647a;
-
+        .project-tags span {
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--blue);
+            background: var(--blue-light);
+            padding: 4px 8px;
+            border-radius: 4px;
         }
 
+        /* =========================
+           EXPERIENCE
+        ========================= */
 
-        /* =========================================================
+        .experience {
+            background: white;
+        }
+
+        .experience-list {
+            max-width: 900px;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 35px;
+            padding: 28px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .experience-item:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-date {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .experience-item h3 {
+            color: var(--navy);
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .experience-company {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 700px;
+        }
+
+        /* =========================
            RESEARCH
-        ========================================================= */
+        ========================= */
+
+        .research {
+            background: var(--light);
+        }
 
         .research-grid {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
-            border-top: 1px solid var(--border);
-            border-left: 1px solid var(--border);
+            gap: 18px;
         }
 
-        .research-item {
-            padding: 32px;
-
-            min-height: 205px;
-
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-
+        .research-card {
             background: white;
-
-            transition:
-                background 0.3s ease,
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-        .research-item:hover {
-            background: #fbfdff;
-
-            transform: translateY(-4px);
-
-            box-shadow: 0 16px 35px rgba(24, 48, 82, 0.06);
-        }
-
-        .research-index {
-            color: #9ca7b7;
-
-            font-family: "Manrope", sans-serif;
-
-            font-size: 12px;
-            font-weight: 700;
-
-            margin-bottom: 25px;
-        }
-
-        .research-item h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 18px;
-
-            margin-bottom: 9px;
-        }
-
-        .research-item p {
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-
-        /* =========================================================
-           BACKGROUND
-        ========================================================= */
-
-        .background-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .background-item {
-            display: grid;
-
-            grid-template-columns: 220px 1fr;
-
-            gap: 50px;
-
-            padding: 32px 0;
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .background-type {
-            color: var(--blue);
-
-            font-size: 11px;
-            font-weight: 800;
-
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-        }
-
-        .background-item h3 {
-            font-family: "Manrope", sans-serif;
-
-            color: var(--navy);
-
-            font-size: 20px;
-
-            margin-bottom: 5px;
-        }
-
-        .background-place {
-            color: #53647c;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            margin-bottom: 9px;
-        }
-
-        .background-item p {
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-
-        /* =========================================================
-           PUBLICATIONS / RESEARCH
-        ========================================================= */
-
-        .publication-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .publication {
-            display: grid;
-
-            grid-template-columns: 60px 1fr;
-
-            gap: 25px;
-
-            padding: 27px 0;
-
-            border-bottom: 1px solid var(--border);
-
-            transition:
-                padding-left 0.25s ease,
-                background 0.25s ease;
-        }
-
-        .publication:hover {
-            padding-left: 12px;
-
-            background: #fbfdff;
-        }
-
-        .publication-number {
-            color: #a2adbb;
-
-            font-family: "Manrope", sans-serif;
-
-            font-size: 12px;
-            font-weight: 700;
-
-            padding-top: 3px;
-        }
-
-        .publication-title {
-            color: #253650;
-
-            font-family: "Manrope", sans-serif;
-
-            font-size: 15px;
-            font-weight: 700;
-
-            line-height: 1.65;
-
-            margin-bottom: 6px;
-        }
-
-        .publication-meta {
-            color: #788496;
-
-            font-size: 13px;
-        }
-
-        .under-review {
-            display: inline-block;
-
-            margin-top: 9px;
-
-            padding: 3px 8px;
-
-            border: 1px solid #f0dcae;
-
-            border-radius: 5px;
-
-            color: #8b6717;
-
-            background: #fffaf0;
-
-            font-size: 10px;
-            font-weight: 700;
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.5px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact-section {
-            background: #f8fafc;
-        }
-
-        .contact-box {
-            display: grid;
-
-            grid-template-columns: 1fr auto;
-
-            align-items: center;
-
-            gap: 40px;
-
-            padding: 55px;
-
             border: 1px solid var(--border);
-
-            border-radius: 14px;
-
-            background: white;
-
-            box-shadow: 0 18px 45px rgba(24, 48, 82, 0.05);
+            padding: 25px;
+            border-radius: 10px;
         }
 
-        .contact-box h2 {
-            font-family: "Manrope", sans-serif;
-
+        .research-card h3 {
             color: var(--navy);
-
-            font-size: 30px;
-
+            font-size: 18px;
             margin-bottom: 8px;
         }
 
-        .contact-box p {
+        .research-card p {
             color: var(--muted);
-
             font-size: 14px;
         }
 
-        .email-link {
-            color: var(--blue);
-
-            font-size: 15px;
-            font-weight: 700;
-
-            margin-top: 12px;
-
+        .scholar-link {
             display: inline-block;
+            margin-top: 28px;
+            color: var(--blue);
+            font-size: 14px;
+            font-weight: 700;
         }
 
-        .contact-actions {
-            display: flex;
-            flex-direction: column;
+        /* =========================
+           CONTACT
+        ========================= */
 
-            gap: 9px;
-
-            min-width: 175px;
+        .contact {
+            padding: 110px 0;
+            text-align: center;
+            background: white;
         }
 
+        .contact-inner {
+            max-width: 700px;
+            margin: auto;
+        }
 
-        /* =========================================================
+        .contact h2 {
+            color: var(--navy);
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        /* =========================
            FOOTER
-        ========================================================= */
+        ========================= */
 
         footer {
-            padding: 32px 0;
-
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
             background: white;
         }
 
         .footer-inner {
             display: flex;
-
-            align-items: center;
             justify-content: space-between;
-
+            align-items: center;
             gap: 20px;
         }
 
-        footer p {
-            color: #8a94a3;
-
-            font-size: 12px;
+        .footer-inner p {
+            color: var(--muted);
+            font-size: 13px;
         }
 
-        footer a {
-            color: var(--blue);
+        .footer-brand {
+            color: var(--navy) !important;
+            font-weight: 700;
         }
 
-
-        /* =========================================================
-           SCROLL REVEAL
-        ========================================================= */
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
 
         .reveal {
             opacity: 0;
-
             transform: translateY(20px);
-
-            transition:
-                opacity 0.7s ease,
-                transform 0.7s ease;
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
         .reveal.visible {
             opacity: 1;
-
             transform: translateY(0);
         }
 
-
-        /* =========================================================
-           MOBILE MENU BUTTON
-        ========================================================= */
-
-        .mobile-menu {
-            display: none;
-
-            width: 40px;
-            height: 40px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 8px;
-
-            background: white;
-
-            cursor: pointer;
-        }
-
-        .mobile-menu span {
-            display: block;
-
-            width: 17px;
-            height: 2px;
-
-            margin: 4px auto;
-
-            background: var(--navy);
-        }
-
-
-        /* =========================================================
+        /* =========================
            RESPONSIVE
-        ========================================================= */
+        ========================= */
 
-        @media (max-width: 1050px) {
+        @media (max-width: 900px) {
 
-            .navigation {
-                gap: 0;
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
             }
 
-            .navigation a {
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            .hero-inner {
-                grid-template-columns: 1fr 240px;
-
-                gap: 50px;
+            .hero-image {
+                order: -1;
             }
 
             .profile-frame {
-                width: 215px;
-                height: 270px;
+                width: 240px;
+                height: 290px;
+            }
+
+            .projects-grid,
+            .research-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
             .architecture-columns {
                 grid-template-columns: 1fr;
             }
+
+            .architecture-columns .architecture-box {
+                min-height: auto;
+            }
         }
 
+        @media (max-width: 700px) {
 
-        @media (max-width: 850px) {
-
-            .topbar-inner {
-                width: min(100% - 32px, 700px);
+            .container {
+                width: min(100% - 28px, 1120px);
             }
 
-            .navigation {
-                display: none;
-
-                position: absolute;
-
-                top: 76px;
-                left: 0;
-                right: 0;
-
-                padding: 10px 16px 15px;
-
-                background: rgba(255,255,255,0.98);
-
-                border-bottom: 1px solid var(--border);
-
-                box-shadow: 0 15px 30px rgba(20,40,70,0.06);
-
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-            .navigation.open {
-                display: flex;
-            }
-
-            .navigation a {
-                padding: 12px 10px;
-
-                border-radius: 7px;
-            }
-
-            .navigation a:hover {
-                background: #f5f8fc;
-            }
-
-            .navigation a::after {
-                display: none;
-            }
-
-            .navigation a.active {
-                background: var(--blue-light);
-            }
-
-            .mobile-menu {
+            .menu-btn {
                 display: block;
             }
 
-            .hero-inner {
-                grid-template-columns: 1fr;
+            .nav-links {
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                gap: 17px;
             }
 
-            .hero-profile {
-                justify-content: flex-start;
-            }
-
-            .profile-frame {
-                width: 190px;
-                height: 225px;
-            }
-
-            .about-layout {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-            .research-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stack-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-item,
-            .background-item {
-                grid-template-columns: 1fr;
-
-                gap: 10px;
-            }
-
-            .contact-box {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-actions {
-                flex-direction: row;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            .container {
-                width: min(100% - 32px, 560px);
-            }
-
-            .topbar-inner {
-                width: calc(100% - 32px);
-            }
-
-            .site-name {
-                font-size: 18px;
+            .nav-links.show {
+                display: flex;
             }
 
             .hero {
-                min-height: auto;
-            }
-
-            .hero-inner {
-                padding: 90px 0 75px;
+                padding-top: 125px;
             }
 
             .hero h1 {
-                font-size: clamp(42px, 13vw, 66px);
-
-                letter-spacing: -2.5px;
-
-                white-space: nowrap;
+                font-size: 46px;
             }
 
-            .hero-title {
-                font-size: 19px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                font-size: 31px;
-            }
-
+            .projects-grid,
             .research-grid {
                 grid-template-columns: 1fr;
             }
 
-            .architecture-box {
-                padding: 25px 18px;
-            }
-
-            .architecture-label {
-                font-size: 18px;
-            }
-
-            .architecture-item {
-                font-size: 11px;
-
-                padding: 6px 9px;
-            }
-
-            .publication {
-                grid-template-columns: 38px 1fr;
-
-                gap: 15px;
-            }
-
-            .contact-box {
-                padding: 32px 25px;
-            }
-
-            .contact-actions {
-                flex-direction: column;
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 8px;
             }
 
             .footer-inner {
                 flex-direction: column;
+                text-align: center;
+            }
 
-                align-items: flex-start;
+            section {
+                padding: 75px 0;
             }
         }
-
-
-        @media (max-width: 390px) {
-
-            .hero h1 {
-                font-size: 39px;
-
-                letter-spacing: -2px;
-            }
-
-            .site-name {
-                font-size: 17px;
-            }
-        }
-
     </style>
-
 </head>
-
 
 <body>
 
-<div class="page">
-
-
-    <!-- =========================================================
+    <!-- =========================
          HEADER
-    ========================================================== -->
+    ========================= -->
 
-    <header class="topbar">
+    <header>
+        <div class="container nav">
 
-        <div class="topbar-inner">
-
-            <a href="#home" class="site-name">
-                Sarwar Khan
+            <a href="#home" class="logo">
+                Sarwar<span>.</span>
             </a>
 
-
-            <nav class="navigation" id="navigation">
-
-                <a href="#home" class="active">Home</a>
-
-                <a href="#about">About</a>
-
-                <a href="#ai">AI / ML</a>
-
-                <a href="#stack">Stack</a>
-
-                <a href="#experience">Experience</a>
-
-                <a href="#projects">Projects</a>
-
-                <a href="#research">Research</a>
-
-                <a href="#contact">Contact</a>
-
-            </nav>
-
-
-            <button
-                class="mobile-menu"
-                id="mobileMenu"
-                aria-label="Open navigation"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+            <button class="menu-btn" id="menuBtn">
+                ☰
             </button>
 
-        </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
+        </div>
     </header>
 
 
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <main>
 
+        <section class="hero" id="home">
 
-        <!-- =====================================================
-             HERO
-        ====================================================== -->
+            <div class="container hero-grid">
 
-        <section id="home" class="hero">
+                <div class="hero-content reveal">
 
-            <div class="container">
+                    <div class="eyebrow">
+                        AI & Software Developer
+                    </div>
 
-                <div class="hero-inner">
+                    <h1>
+                        Building <span>AI</span><br>
+                        & Software Systems.
+                    </h1>
 
+                    <div class="hero-subtitle">
+                        AI · Backend · Web · APIs · Automation
+                    </div>
 
-                    <div class="hero-content reveal">
+                    <p class="hero-text">
+                        I build practical software systems that connect AI,
+                        APIs, backend services, web applications, data and
+                        automation into usable products.
+                    </p>
 
-                        <div class="hero-kicker">
-                            AI · Backend · Web · Automation
-                        </div>
+                    <div class="hero-buttons">
 
+                        <a href="#architecture" class="btn btn-primary">
+                            View Architecture
+                        </a>
 
-                        <h1>
-                            Sarwar Khan
-                        </h1>
+                        <a href="#projects" class="btn btn-secondary">
+                            View Projects
+                        </a>
 
-
-                        <div class="hero-title">
-                            AI &amp; Full-Stack Developer
-                        </div>
-
-
-                        <div class="hero-institution">
-                            Building intelligent software systems, APIs and modern web applications
-                        </div>
-
-
-                        <p class="hero-description">
-
-                            I build AI-powered applications, backend systems,
-                            APIs, intelligent automation workflows and modern
-                            web platforms using Python, PHP, Laravel, Flask,
-                            Django, WordPress and AI agent technologies.
-
-                        </p>
-
-
-                        <div class="hero-actions">
-
-                            <a
-                                class="button button-primary"
-                                href="#projects"
-                            >
-                                View Projects
-                            </a>
-
-
-                            <a
-                                class="button button-outline"
-                                href="#stack"
-                            >
-                                Technology Stack
-                            </a>
-
-
-                            <a
-                                class="button button-outline"
-                                href="mailto:sarwar@uoas.edu.pk"
-                            >
-                                Contact
-                            </a>
-
-                        </div>
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact
+                        </a>
 
                     </div>
 
+                </div>
 
 
-                    <div class="hero-profile reveal">
+                <div class="hero-image reveal">
 
-                        <div class="profile-frame">
-
-                            <img
-                                src="9-21.jpg"
-                                alt="Sarwar Khan"
-                            >
-
-                        </div>
-
+                    <div class="profile-frame">
+                        <img src="9-21.jpg" alt="Sarwar Khan">
                     </div>
-
 
                 </div>
 
@@ -1682,133 +809,70 @@
         </section>
 
 
-
-        <!-- =====================================================
+        <!-- =========================
              ABOUT
-        ====================================================== -->
+        ========================= -->
 
-        <section id="about">
+        <section class="about" id="about">
 
             <div class="container">
 
-                <div class="section-header reveal">
+                <div class="about-grid">
 
-                    <div class="section-number">
-                        01 / About
-                    </div>
+                    <div class="about-text reveal">
 
-                    <h2 class="section-title">
-                        Developer Profile
-                    </h2>
+                        <div class="section-label">
+                            About
+                        </div>
 
-                    <p class="section-intro">
-                        Building software across AI, backend systems,
-                        APIs, web platforms and automation.
-                    </p>
-
-                </div>
-
-
-                <div class="about-layout">
-
-
-                    <div class="about-copy reveal">
+                        <div class="section-header" style="margin-bottom:20px;">
+                            <h2>From AI ideas to working systems.</h2>
+                        </div>
 
                         <p>
-                            I am a software developer working across
-                            Artificial Intelligence, backend development,
-                            web applications, APIs and intelligent automation.
+                            My work sits at the intersection of artificial
+                            intelligence and software engineering.
                         </p>
 
                         <p>
-                            My development work includes Python, PHP, Laravel,
-                            Flask, Django, WordPress, WooCommerce and
-                            API-driven applications. I build systems that
-                            connect application logic, external services,
-                            databases and intelligent processing.
+                            I develop AI-powered applications, backend
+                            systems, APIs, web platforms and automation
+                            workflows.
                         </p>
 
                         <p>
-                            On the AI side, I work with Generative AI,
-                            Large Language Models, RAG, AI Agents,
-                            LangGraph, machine learning, deep learning,
-                            computer vision and intelligent automation.
-                        </p>
-
-                        <p>
-                            I also work with REST APIs, JSON, web scraping,
-                            BeautifulSoup, data processing and third-party
-                            integrations to build practical end-to-end
-                            software systems.
+                            The focus is not only on the model or the code,
+                            but on connecting the complete system from
+                            input to processing, data and final application.
                         </p>
 
                     </div>
 
 
-                    <div class="facts reveal">
+                    <div class="about-points reveal">
 
-                        <div class="fact">
-
-                            <div class="fact-label">
-                                Primary Focus
-                            </div>
-
-                            <div class="fact-value">
-                                AI &amp; Software Development
-                            </div>
-
+                        <div class="about-point">
+                            <h3>AI Systems</h3>
+                            <p>
+                                LLM applications, agents, RAG, computer
+                                vision and machine learning.
+                            </p>
                         </div>
 
-
-                        <div class="fact">
-
-                            <div class="fact-label">
-                                Backend
-                            </div>
-
-                            <div class="fact-value">
-                                Python · PHP · Laravel · Flask · Django
-                            </div>
-
+                        <div class="about-point">
+                            <h3>Software Engineering</h3>
+                            <p>
+                                Backend services, APIs, web applications,
+                                databases and business logic.
+                            </p>
                         </div>
 
-
-                        <div class="fact">
-
-                            <div class="fact-label">
-                                AI
-                            </div>
-
-                            <div class="fact-value">
-                                LLMs · RAG · AI Agents · LangGraph
-                            </div>
-
-                        </div>
-
-
-                        <div class="fact">
-
-                            <div class="fact-label">
-                                Web
-                            </div>
-
-                            <div class="fact-value">
-                                WordPress · WooCommerce · JavaScript
-                            </div>
-
-                        </div>
-
-
-                        <div class="fact">
-
-                            <div class="fact-label">
-                                APIs
-                            </div>
-
-                            <div class="fact-value">
-                                REST · GraphQL · JSON · Webhooks
-                            </div>
-
+                        <div class="about-point">
+                            <h3>Automation & Integration</h3>
+                            <p>
+                                Connecting applications, APIs, external
+                                services and automated workflows.
+                            </p>
                         </div>
 
                     </div>
@@ -1820,217 +884,110 @@
         </section>
 
 
+        <!-- =========================
+             ARCHITECTURE
+        ========================= -->
 
-        <!-- =====================================================
-             AI / ML ARCHITECTURE
-        ====================================================== -->
-
-        <section id="ai">
+        <section class="architecture" id="architecture">
 
             <div class="container">
 
                 <div class="section-header reveal">
 
-                    <div class="section-number">
-                        02 / AI Architecture
+                    <div class="section-label">
+                        Architecture
                     </div>
 
-                    <h2 class="section-title">
-                        AI / ML Systems
+                    <h2>
+                        How I build systems
                     </h2>
 
-                    <p class="section-intro">
-                        From intelligent models and AI agents to APIs,
-                        application processing, web systems and external
-                        integrations.
+                    <p>
+                        A single view of the technologies and layers
+                        that make up my development work.
                     </p>
 
                 </div>
 
 
-                <div class="architecture">
+                <div class="architecture-flow">
 
 
-                    <!-- AI / ML -->
+                    <!-- AI -->
 
-                    <div class="architecture-box ai-box reveal">
+                    <div class="architecture-box main reveal">
 
-                        <div class="architecture-subtitle">
-                            Intelligence Layer
-                        </div>
+                        <h3>AI / ML</h3>
 
-                        <div class="architecture-label">
-                            AI / ML SYSTEMS
-                        </div>
+                        <div class="chips">
 
-                        <div class="architecture-items">
-
-                            <span class="architecture-item">
-                                Generative AI
-                            </span>
-
-                            <span class="architecture-item">
-                                LLMs
-                            </span>
-
-                            <span class="architecture-item">
-                                RAG
-                            </span>
-
-                            <span class="architecture-item">
-                                AI Agents
-                            </span>
-
-                            <span class="architecture-item">
-                                LangGraph
-                            </span>
-
-                            <span class="architecture-item">
-                                Machine Learning
-                            </span>
-
-                            <span class="architecture-item">
-                                Deep Learning
-                            </span>
-
-                            <span class="architecture-item">
-                                Computer Vision
-                            </span>
-
-                            <span class="architecture-item">
-                                XAI
-                            </span>
+                            <span class="chip">Generative AI</span>
+                            <span class="chip">LLMs</span>
+                            <span class="chip">RAG</span>
+                            <span class="chip">AI Agents</span>
+                            <span class="chip">LangGraph</span>
+                            <span class="chip">Machine Learning</span>
+                            <span class="chip">Deep Learning</span>
+                            <span class="chip">Computer Vision</span>
+                            <span class="chip">XAI</span>
 
                         </div>
 
                     </div>
 
 
-                    <div class="architecture-connector"></div>
+                    <div class="arrow">↓</div>
 
 
                     <!-- API -->
 
                     <div class="architecture-box reveal">
 
-                        <div class="architecture-subtitle">
-                            Service Layer
-                        </div>
+                        <h3>API Layer</h3>
 
-                        <div class="architecture-label">
-                            FAST API LAYER
-                        </div>
+                        <div class="chips">
 
-                        <div class="architecture-items">
-
-                            <span class="architecture-item">
-                                REST
-                            </span>
-
-                            <span class="architecture-item">
-                                GraphQL
-                            </span>
-
-                            <span class="architecture-item">
-                                JSON
-                            </span>
-
-                            <span class="architecture-item">
-                                Authentication
-                            </span>
-
-                            <span class="architecture-item">
-                                Authorization
-                            </span>
-
-                            <span class="architecture-item">
-                                Validation
-                            </span>
-
-                            <span class="architecture-item">
-                                Webhooks
-                            </span>
-
-                            <span class="architecture-item">
-                                Rate Limiting
-                            </span>
-
-                            <span class="architecture-item">
-                                Secure API Design
-                            </span>
+                            <span class="chip">REST</span>
+                            <span class="chip">GraphQL</span>
+                            <span class="chip">JSON</span>
+                            <span class="chip">Authentication</span>
+                            <span class="chip">Validation</span>
+                            <span class="chip">Webhooks</span>
+                            <span class="chip">Secure API Design</span>
 
                         </div>
 
                     </div>
 
 
-                    <div class="architecture-connector"></div>
+                    <div class="arrow">↓</div>
 
 
                     <!-- APPLICATION -->
 
                     <div class="architecture-box reveal">
 
-                        <div class="architecture-subtitle">
-                            Backend Layer
-                        </div>
+                        <h3>Application / Processing</h3>
 
-                        <div class="architecture-label">
-                            APPLICATION / PROCESSING
-                        </div>
+                        <div class="chips">
 
-                        <div class="architecture-items">
-
-                            <span class="architecture-item">
-                                Laravel
-                            </span>
-
-                            <span class="architecture-item">
-                                PHP
-                            </span>
-
-                            <span class="architecture-item">
-                                Python
-                            </span>
-
-                            <span class="architecture-item">
-                                Flask
-                            </span>
-
-                            <span class="architecture-item">
-                                Django
-                            </span>
-
-                            <span class="architecture-item">
-                                Business Logic
-                            </span>
-
-                            <span class="architecture-item">
-                                Data Processing
-                            </span>
-
-                            <span class="architecture-item">
-                                Background Jobs
-                            </span>
-
-                            <span class="architecture-item">
-                                Automation
-                            </span>
-
-                            <span class="architecture-item">
-                                Queues
-                            </span>
-
-                            <span class="architecture-item">
-                                External API Integration
-                            </span>
+                            <span class="chip">Python</span>
+                            <span class="chip">PHP</span>
+                            <span class="chip">Laravel</span>
+                            <span class="chip">Flask</span>
+                            <span class="chip">Django</span>
+                            <span class="chip">Business Logic</span>
+                            <span class="chip">Queues</span>
+                            <span class="chip">Automation</span>
+                            <span class="chip">BeautifulSoup</span>
+                            <span class="chip">Integration</span>
 
                         </div>
 
                     </div>
 
 
-                    <div class="architecture-connector"></div>
+                    <div class="arrow">↓</div>
 
 
                     <!-- THREE SYSTEMS -->
@@ -2038,162 +995,52 @@
                     <div class="architecture-columns">
 
 
-                        <!-- WEB -->
+                        <div class="architecture-box reveal">
 
-                        <div class="architecture-box architecture-small reveal">
+                            <h3>Web Systems</h3>
 
-                            <div class="architecture-subtitle">
-                                Frontend
-                            </div>
+                            <div class="chips">
 
-                            <div class="architecture-label">
-                                WEB SYSTEMS
-                            </div>
-
-                            <div class="architecture-items">
-
-                                <span class="architecture-item">
-                                    React
-                                </span>
-
-                                <span class="architecture-item">
-                                    JavaScript
-                                </span>
-
-                                <span class="architecture-item">
-                                    HTML
-                                </span>
-
-                                <span class="architecture-item">
-                                    WordPress
-                                </span>
-
-                                <span class="architecture-item">
-                                    WooCommerce
-                                </span>
-
-                                <span class="architecture-item">
-                                    Web Applications
-                                </span>
+                                <span class="chip">React</span>
+                                <span class="chip">JavaScript</span>
+                                <span class="chip">HTML</span>
+                                <span class="chip">WordPress</span>
+                                <span class="chip">WooCommerce</span>
 
                             </div>
 
                         </div>
 
 
-                        <!-- DATA -->
+                        <div class="architecture-box reveal">
 
-                        <div class="architecture-box architecture-small reveal">
+                            <h3>Data</h3>
 
-                            <div class="architecture-subtitle">
-                                Storage
-                            </div>
+                            <div class="chips">
 
-                            <div class="architecture-label">
-                                DATA
-                            </div>
-
-                            <div class="architecture-items">
-
-                                <span class="architecture-item">
-                                    MySQL
-                                </span>
-
-                                <span class="architecture-item">
-                                    PostgreSQL
-                                </span>
-
-                                <span class="architecture-item">
-                                    SQLite
-                                </span>
-
-                                <span class="architecture-item">
-                                    SQL
-                                </span>
-
-                                <span class="architecture-item">
-                                    ORM
-                                </span>
-
-                                <span class="architecture-item">
-                                    Data Modeling
-                                </span>
+                                <span class="chip">MySQL</span>
+                                <span class="chip">PostgreSQL</span>
+                                <span class="chip">SQLite</span>
+                                <span class="chip">SQL</span>
+                                <span class="chip">ORM</span>
+                                <span class="chip">Data Modeling</span>
 
                             </div>
 
                         </div>
 
 
-                        <!-- EXTERNAL -->
+                        <div class="architecture-box reveal">
 
-                        <div class="architecture-box architecture-small reveal">
+                            <h3>External Systems</h3>
 
-                            <div class="architecture-subtitle">
-                                Integrations
-                            </div>
+                            <div class="chips">
 
-                            <div class="architecture-label">
-                                EXTERNAL SYSTEMS
-                            </div>
-
-                            <div class="architecture-items">
-
-                                <span class="architecture-item">
-                                    WordPress
-                                </span>
-
-                                <span class="architecture-item">
-                                    WooCommerce
-                                </span>
-
-                                <span class="architecture-item">
-                                    Payment APIs
-                                </span>
-
-                                <span class="architecture-item">
-                                    3rd-party APIs
-                                </span>
+                                <span class="chip">Payment APIs</span>
+                                <span class="chip">3rd-party APIs</span>
+                                <span class="chip">External Services</span>
 
                             </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- AUTOMATION -->
-
-                    <div class="automation-box reveal">
-
-                        <h3>
-                            AUTOMATION &amp; INTEGRATION
-                        </h3>
-
-                        <div class="architecture-items">
-
-                            <span class="architecture-item">
-                                BeautifulSoup
-                            </span>
-
-                            <span class="architecture-item">
-                                Web Scraping
-                            </span>
-
-                            <span class="architecture-item">
-                                REST API Integration
-                            </span>
-
-                            <span class="architecture-item">
-                                API Automation
-                            </span>
-
-                            <span class="architecture-item">
-                                JSON
-                            </span>
-
-                            <span class="architecture-item">
-                                Data Extraction
-                            </span>
 
                         </div>
 
@@ -2206,542 +1053,27 @@
         </section>
 
 
-
-        <!-- =====================================================
-             TECHNOLOGY STACK
-        ====================================================== -->
-
-        <section id="stack">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="section-number">
-                        03 / Technology
-                    </div>
-
-                    <h2 class="section-title">
-                        Technology Stack
-                    </h2>
-
-                    <p class="section-intro">
-                        Technologies and tools used across AI, backend,
-                        web development, APIs, databases and automation.
-                    </p>
-
-                </div>
-
-
-                <div class="stack-grid">
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Languages
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">Python</span>
-                            <span class="stack-item">PHP</span>
-                            <span class="stack-item">JavaScript</span>
-                            <span class="stack-item">C++</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Backend
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">Laravel</span>
-                            <span class="stack-item">Flask</span>
-                            <span class="stack-item">Django</span>
-                            <span class="stack-item">OOP</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            AI / ML
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">Generative AI</span>
-                            <span class="stack-item">LLMs</span>
-                            <span class="stack-item">RAG</span>
-                            <span class="stack-item">AI Agents</span>
-                            <span class="stack-item">LangGraph</span>
-                            <span class="stack-item">LangChain</span>
-                            <span class="stack-item">PyTorch</span>
-                            <span class="stack-item">TensorFlow</span>
-                            <span class="stack-item">OpenCV</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">WordPress</span>
-                            <span class="stack-item">WooCommerce</span>
-                            <span class="stack-item">HTML</span>
-                            <span class="stack-item">CSS</span>
-                            <span class="stack-item">JavaScript</span>
-                            <span class="stack-item">React</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            APIs &amp; Integration
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">REST</span>
-                            <span class="stack-item">GraphQL</span>
-                            <span class="stack-item">JSON</span>
-                            <span class="stack-item">Webhooks</span>
-                            <span class="stack-item">Authentication</span>
-                            <span class="stack-item">API Integration</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Databases
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">MySQL</span>
-                            <span class="stack-item">PostgreSQL</span>
-                            <span class="stack-item">SQLite</span>
-                            <span class="stack-item">SQL</span>
-                            <span class="stack-item">ORM</span>
-                            <span class="stack-item">Data Modeling</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Automation
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">BeautifulSoup</span>
-                            <span class="stack-item">Web Scraping</span>
-                            <span class="stack-item">Data Extraction</span>
-                            <span class="stack-item">API Automation</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stack-card reveal">
-
-                        <h3>
-                            Development Tools
-                        </h3>
-
-                        <div class="stack-items">
-
-                            <span class="stack-item">Git</span>
-                            <span class="stack-item">GitHub</span>
-                            <span class="stack-item">VS Code</span>
-                            <span class="stack-item">Linux</span>
-                            <span class="stack-item">macOS</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             EXPERIENCE
-        ====================================================== -->
-
-        <section id="experience">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="section-number">
-                        04 / Experience
-                    </div>
-
-                    <h2 class="section-title">
-                        Development Experience
-                    </h2>
-
-                    <p class="section-intro">
-                        Practical software development across AI,
-                        backend systems, web platforms and automation.
-                    </p>
-
-                </div>
-
-
-                <div class="experience-list">
-
-
-                    <!-- AI -->
-
-                    <article class="experience-item reveal">
-
-                        <div class="experience-date">
-                            AI DEVELOPMENT
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                AI &amp; Intelligent Systems
-                            </h3>
-
-                            <div class="experience-place">
-                                AI Applications · Agent Systems · Automation
-                            </div>
-
-                            <p>
-                                Development of AI-powered applications using
-                                Large Language Models, Generative AI, RAG,
-                                AI Agents and tool-enabled workflows.
-                            </p>
-
-                            <p>
-                                Working with LangGraph and modern LLM APIs
-                                to build stateful conversational systems,
-                                tool-calling workflows and intelligent
-                                application logic.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span class="experience-tag">
-                                    Python
-                                </span>
-
-                                <span class="experience-tag">
-                                    LLMs
-                                </span>
-
-                                <span class="experience-tag">
-                                    RAG
-                                </span>
-
-                                <span class="experience-tag">
-                                    LangGraph
-                                </span>
-
-                                <span class="experience-tag">
-                                    AI Agents
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- BACKEND -->
-
-                    <article class="experience-item reveal">
-
-                        <div class="experience-date">
-                            BACKEND
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Backend &amp; API Development
-                            </h3>
-
-                            <div class="experience-place">
-                                Python · PHP · Laravel · Flask · Django
-                            </div>
-
-                            <p>
-                                Development of backend applications,
-                                business logic, REST APIs, data processing
-                                workflows and external service integrations.
-                            </p>
-
-                            <p>
-                                Building application services around
-                                authentication, authorization, validation,
-                                JSON-based communication and third-party APIs.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span class="experience-tag">
-                                    Laravel
-                                </span>
-
-                                <span class="experience-tag">
-                                    PHP
-                                </span>
-
-                                <span class="experience-tag">
-                                    Python
-                                </span>
-
-                                <span class="experience-tag">
-                                    Flask
-                                </span>
-
-                                <span class="experience-tag">
-                                    Django
-                                </span>
-
-                                <span class="experience-tag">
-                                    REST APIs
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- WORDPRESS -->
-
-                    <article class="experience-item reveal">
-
-                        <div class="experience-date">
-                            WEB DEVELOPMENT
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                WordPress &amp; WooCommerce Development
-                            </h3>
-
-                            <div class="experience-place">
-                                WordPress · WooCommerce · PHP · APIs
-                            </div>
-
-                            <p>
-                                Development and customization of WordPress
-                                and WooCommerce systems, including custom
-                                functionality, business workflows,
-                                integrations and API-driven features.
-                            </p>
-
-                            <p>
-                                Working with custom post types, metadata,
-                                plugins, membership systems, payment
-                                integrations and external services.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span class="experience-tag">
-                                    WordPress
-                                </span>
-
-                                <span class="experience-tag">
-                                    WooCommerce
-                                </span>
-
-                                <span class="experience-tag">
-                                    PHP
-                                </span>
-
-                                <span class="experience-tag">
-                                    REST API
-                                </span>
-
-                                <span class="experience-tag">
-                                    ACF
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- AUTOMATION -->
-
-                    <article class="experience-item reveal">
-
-                        <div class="experience-date">
-                            AUTOMATION
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Automation &amp; Data Processing
-                            </h3>
-
-                            <div class="experience-place">
-                                Python · BeautifulSoup · APIs
-                            </div>
-
-                            <p>
-                                Development of automation workflows for
-                                data extraction, web scraping, API
-                                communication and structured data processing.
-                            </p>
-
-                            <p>
-                                Building practical tools that connect
-                                external services with application logic
-                                and automated processing pipelines.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span class="experience-tag">
-                                    BeautifulSoup
-                                </span>
-
-                                <span class="experience-tag">
-                                    Web Scraping
-                                </span>
-
-                                <span class="experience-tag">
-                                    JSON
-                                </span>
-
-                                <span class="experience-tag">
-                                    API Automation
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- EARLIER TECHNICAL -->
-
-                    <article class="experience-item reveal">
-
-                        <div class="experience-date">
-                            EARLIER EXPERIENCE
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Telecommunications &amp; Network Engineering
-                            </h3>
-
-                            <div class="experience-place">
-                                Saudi Arabia
-                            </div>
-
-                            <p>
-                                Earlier engineering experience involving
-                                telecommunications infrastructure,
-                                network systems, installation, integration,
-                                testing, troubleshooting and technical
-                                operations.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span class="experience-tag">
-                                    TCP/IP
-                                </span>
-
-                                <span class="experience-tag">
-                                    Networking
-                                </span>
-
-                                <span class="experience-tag">
-                                    Infrastructure
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
+        <!-- =========================
              PROJECTS
-        ====================================================== -->
+        ========================= -->
 
-        <section id="projects">
+        <section class="projects" id="projects">
 
             <div class="container">
 
                 <div class="section-header reveal">
 
-                    <div class="section-number">
-                        05 / Projects
+                    <div class="section-label">
+                        Projects
                     </div>
 
-                    <h2 class="section-title">
-                        Selected Projects
+                    <h2>
+                        Things I build
                     </h2>
 
-                    <p class="section-intro">
-                        Practical systems spanning AI agents, backend
-                        development, web platforms, APIs and automation.
+                    <p>
+                        Selected systems and applications showing how the
+                        architecture is applied in real projects.
                     </p>
 
                 </div>
@@ -2750,255 +1082,124 @@
                 <div class="projects-grid">
 
 
-                    <!-- PROJECT 01 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            01
-                        </div>
+                        <div class="project-number">01</div>
 
-                        <h3>
-                            AI Agent with LangGraph
-                        </h3>
+                        <h3>AI Agent</h3>
 
                         <p>
-                            Python-based AI agent architecture using
-                            LangGraph, LLMs, conversation state and
-                            tool integration for multi-step intelligent
-                            workflows.
+                            Conversational AI agent with tool calling,
+                            memory and workflow orchestration.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                Python
-                            </span>
-
-                            <span class="project-tag">
-                                LangGraph
-                            </span>
-
-                            <span class="project-tag">
-                                LLM
-                            </span>
-
-                            <span class="project-tag">
-                                AI Agents
-                            </span>
-
+                            <span>Python</span>
+                            <span>LangGraph</span>
+                            <span>LLM</span>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 02 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            02
-                        </div>
+                        <div class="project-number">02</div>
 
-                        <h3>
-                            Flask Authentication System
-                        </h3>
+                        <h3>Flask Authentication System</h3>
 
                         <p>
-                            Lightweight Flask application implementing
-                            user registration, login, password validation,
-                            sessions, SQLite and object-oriented application
-                            structure.
+                            Lightweight authentication application with
+                            registration, login, validation and SQLite.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                Python
-                            </span>
-
-                            <span class="project-tag">
-                                Flask
-                            </span>
-
-                            <span class="project-tag">
-                                SQLite
-                            </span>
-
-                            <span class="project-tag">
-                                OOP
-                            </span>
-
+                            <span>Flask</span>
+                            <span>Python</span>
+                            <span>SQLite</span>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 03 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            03
-                        </div>
+                        <div class="project-number">03</div>
 
-                        <h3>
-                            WordPress &amp; WooCommerce Systems
-                        </h3>
+                        <h3>WordPress Systems</h3>
 
                         <p>
-                            Custom WordPress and WooCommerce development
-                            involving APIs, custom functionality,
-                            membership workflows, data integration and
-                            business automation.
+                            Custom WordPress and commerce systems connected
+                            with business logic, APIs and external services.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                WordPress
-                            </span>
-
-                            <span class="project-tag">
-                                WooCommerce
-                            </span>
-
-                            <span class="project-tag">
-                                PHP
-                            </span>
-
-                            <span class="project-tag">
-                                REST API
-                            </span>
-
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                            <span>APIs</span>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 04 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            04
-                        </div>
+                        <div class="project-number">04</div>
 
-                        <h3>
-                            AI &amp; API Integration
-                        </h3>
+                        <h3>AI API Integration</h3>
 
                         <p>
-                            Backend workflows connecting AI services,
-                            external APIs and application logic to create
-                            intelligent data-processing and automation
-                            systems.
+                            Applications that connect AI models with backend
+                            services and existing software systems.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                Python
-                            </span>
-
-                            <span class="project-tag">
-                                REST
-                            </span>
-
-                            <span class="project-tag">
-                                JSON
-                            </span>
-
-                            <span class="project-tag">
-                                LLMs
-                            </span>
-
+                            <span>AI</span>
+                            <span>REST</span>
+                            <span>Python</span>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 05 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            05
-                        </div>
+                        <div class="project-number">05</div>
 
-                        <h3>
-                            Web Scraping &amp; Automation
-                        </h3>
+                        <h3>Automation & Scraping</h3>
 
                         <p>
-                            Python-based data extraction and automation
-                            workflows using BeautifulSoup, APIs and
-                            structured data processing.
+                            Automated workflows for collecting, processing
+                            and moving information between systems.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                Python
-                            </span>
-
-                            <span class="project-tag">
-                                BeautifulSoup
-                            </span>
-
-                            <span class="project-tag">
-                                Web Scraping
-                            </span>
-
-                            <span class="project-tag">
-                                Automation
-                            </span>
-
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Automation</span>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 06 -->
-
                     <article class="project-card reveal">
 
-                        <div class="project-number">
-                            06
-                        </div>
+                        <div class="project-number">06</div>
 
-                        <h3>
-                            Intelligent Computer Vision Systems
-                        </h3>
+                        <h3>AI & Vision Systems</h3>
 
                         <p>
-                            AI and computer vision systems involving image
-                            processing, classification, multimodal learning,
-                            deep learning and robust machine learning.
+                            Machine learning and computer vision systems
+                            for classification, recognition and analysis.
                         </p>
 
                         <div class="project-tags">
-
-                            <span class="project-tag">
-                                Python
-                            </span>
-
-                            <span class="project-tag">
-                                OpenCV
-                            </span>
-
-                            <span class="project-tag">
-                                Deep Learning
-                            </span>
-
-                            <span class="project-tag">
-                                Computer Vision
-                            </span>
-
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                            <span>ML</span>
                         </div>
 
                     </article>
-
 
                 </div>
 
@@ -3007,29 +1208,162 @@
         </section>
 
 
+        <!-- =========================
+             EXPERIENCE
+        ========================= -->
 
-        <!-- =====================================================
-             RESEARCH
-        ====================================================== -->
-
-        <section id="research">
+        <section class="experience" id="experience">
 
             <div class="container">
 
                 <div class="section-header reveal">
 
-                    <div class="section-number">
-                        06 / Research
+                    <div class="section-label">
+                        Experience
                     </div>
 
-                    <h2 class="section-title">
-                        AI Research Background
+                    <h2>
+                        Practical engineering background
                     </h2>
 
-                    <p class="section-intro">
-                        Research experience supporting work in AI,
-                        computer vision, multimodal systems and robust
-                        machine learning.
+                    <p>
+                        Development experience across AI, software systems,
+                        web platforms and technical infrastructure.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-list">
+
+
+                    <div class="experience-item reveal">
+
+                        <div class="experience-date">
+                            2018 — Present
+                        </div>
+
+                        <div>
+
+                            <h3>AI & Full-Stack Software Developer</h3>
+
+                            <div class="experience-company">
+                                Freelance / Independent Development
+                            </div>
+
+                            <p>
+                                Designing and developing AI-powered
+                                applications, backend systems, APIs,
+                                web platforms, automation workflows and
+                                integrations with external services.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-item reveal">
+
+                        <div class="experience-date">
+                            2025 — Present
+                        </div>
+
+                        <div>
+
+                            <h3>Lecturer & AI Researcher</h3>
+
+                            <div class="experience-company">
+                                University of Agriculture Swat
+                            </div>
+
+                            <p>
+                                Teaching computing and AI-related subjects
+                                while continuing research and practical
+                                development in artificial intelligence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-item reveal">
+
+                        <div class="experience-date">
+                            2015 — 2017
+                        </div>
+
+                        <div>
+
+                            <h3>Teaching Assistant</h3>
+
+                            <div class="experience-company">
+                                SIIT, Thammasat University, Thailand
+                            </div>
+
+                            <p>
+                                Academic and technical experience in
+                                computing and engineering education.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-item reveal">
+
+                        <div class="experience-date">
+                            2012 — 2015
+                        </div>
+
+                        <div>
+
+                            <h3>Operations & Maintenance Engineer</h3>
+
+                            <div class="experience-company">
+                                Saudi Telecom / Alcatel-Lucent Project
+                            </div>
+
+                            <p>
+                                Worked with telecommunications systems,
+                                technical operations, monitoring and
+                                infrastructure troubleshooting.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH
+        ========================= -->
+
+        <section class="research" id="research">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <div class="section-label">
+                        Research
+                    </div>
+
+                    <h2>
+                        Research background
+                    </h2>
+
+                    <p>
+                        AI research that complements my software development
+                        work.
                     </p>
 
                 </div>
@@ -3038,429 +1372,81 @@
                 <div class="research-grid">
 
 
-                    <article class="research-item reveal">
+                    <div class="research-card reveal">
 
-                        <div class="research-index">
-                            01
-                        </div>
-
-                        <h3>
-                            Computer Vision
-                        </h3>
+                        <h3>Deep Learning</h3>
 
                         <p>
-                            Image classification, visual recognition,
-                            detection and multimedia understanding.
+                            Representation learning, metric learning,
+                            classification and robust AI systems.
                         </p>
 
-                    </article>
+                    </div>
 
 
-                    <article class="research-item reveal">
+                    <div class="research-card reveal">
 
-                        <div class="research-index">
-                            02
-                        </div>
-
-                        <h3>
-                            Deep Learning
-                        </h3>
+                        <h3>Computer Vision</h3>
 
                         <p>
-                            Neural networks, representation learning,
-                            model development and evaluation.
+                            Visual recognition, image analysis and
+                            computer vision applications.
                         </p>
 
-                    </article>
+                    </div>
 
 
-                    <article class="research-item reveal">
+                    <div class="research-card reveal">
 
-                        <div class="research-index">
-                            03
-                        </div>
-
-                        <h3>
-                            Adversarial ML
-                        </h3>
+                        <h3>Multimodal AI</h3>
 
                         <p>
-                            Adversarial attacks, defense mechanisms,
-                            robustness and resilient AI models.
+                            Audio-visual learning, multimedia systems and
+                            multimodal representation learning.
                         </p>
 
-                    </article>
-
-
-                    <article class="research-item reveal">
-
-                        <div class="research-index">
-                            04
-                        </div>
-
-                        <h3>
-                            Multimodal AI
-                        </h3>
-
-                        <p>
-                            Learning from image, audio, video and
-                            combined multimodal representations.
-                        </p>
-
-                    </article>
-
-
-                    <article class="research-item reveal">
-
-                        <div class="research-index">
-                            05
-                        </div>
-
-                        <h3>
-                            Audio-Visual AI
-                        </h3>
-
-                        <p>
-                            Audio classification, audiovisual learning,
-                            clustering and multimodal understanding.
-                        </p>
-
-                    </article>
-
-
-                    <article class="research-item reveal">
-
-                        <div class="research-index">
-                            06
-                        </div>
-
-                        <h3>
-                            Generative AI
-                        </h3>
-
-                        <p>
-                            LLMs, RAG, natural language processing,
-                            AI agents and intelligent automation.
-                        </p>
-
-                    </article>
+                    </div>
 
 
                 </div>
+
+
+                <a href="https://scholar.google.com/" target="_blank"
+                    class="scholar-link">
+                    View Google Scholar →
+                </a>
 
             </div>
 
         </section>
 
 
+        <!-- =========================
+             CONTACT
+        ========================= -->
 
-        <!-- =====================================================
-             BACKGROUND
-        ====================================================== -->
-
-        <section id="background">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="section-number">
-                        07 / Background
-                    </div>
-
-                    <h2 class="section-title">
-                        Technical Background
-                    </h2>
-
-                    <p class="section-intro">
-                        Academic and engineering background supporting
-                        my work in AI and software development.
-                    </p>
-
-                </div>
-
-
-                <div class="background-list">
-
-
-                    <article class="background-item reveal">
-
-                        <div class="background-type">
-                            Doctoral
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Ph.D. in Computer Science
-                            </h3>
-
-                            <div class="background-place">
-                                National Chengchi University · Taiwan
-                            </div>
-
-                            <p>
-                                Research in Artificial Intelligence,
-                                Deep Learning, Adversarial Machine Learning,
-                                Computer Vision, Multimedia and Robust AI.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="background-item reveal">
-
-                        <div class="background-type">
-                            Master's
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                M.Eng. in Information and Communication
-                                Technology for Embedded Systems
-                            </h3>
-
-                            <div class="background-place">
-                                Kasetsart University · Thailand
-                            </div>
-
-                            <p>
-                                AI-based intelligent transportation systems,
-                                computer vision and image processing.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="background-item reveal">
-
-                        <div class="background-type">
-                            Engineering
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                B.Sc. in Telecommunication Engineering
-                            </h3>
-
-                            <div class="background-place">
-                                University of Engineering and Technology · Peshawar
-                            </div>
-
-                            <p>
-                                Telecommunications, networking, Linux systems
-                                and VoIP infrastructure.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             SELECTED RESEARCH
-        ====================================================== -->
-
-        <section id="publications">
+        <section class="contact" id="contact">
 
             <div class="container">
 
-                <div class="section-header reveal">
+                <div class="contact-inner reveal">
 
-                    <div class="section-number">
-                        08 / Selected Research
+                    <div class="section-label">
+                        Contact
                     </div>
 
-                    <h2 class="section-title">
-                        Research Publications
+                    <h2>
+                        Let's build something useful.
                     </h2>
 
-                    <p class="section-intro">
-                        Selected publications from work in adversarial
-                        machine learning, multimedia AI, computer vision
-                        and multimodal systems.
+                    <p>
+                        Interested in AI systems, software development,
+                        APIs, automation or technical collaboration?
                     </p>
 
-                </div>
-
-
-                <div class="publication-list">
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            01
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                W. Ahmad, Y.-T. Peng, Y.-H. Chang, G. O. Ganfure,
-                                and S. Khan, "CAPST: Leveraging Capsule Networks
-                                and Temporal Attention for Accurate Model
-                                Attribution in DeepFake Videos."
-                            </div>
-
-                            <div class="publication-meta">
-                                ACM Transactions on Multimedia Computing,
-                                Communications and Applications, 2024.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            02
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
-                                "Adversarially Robust DeepFake Detection via
-                                Adversarial Features Similarity Learning."
-                            </div>
-
-                            <div class="publication-meta">
-                                International Conference on Multimedia Modeling,
-                                Springer, 2024, pp. 503–516.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            03
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
-                                "Robust Action Recognition through Self-Supervised
-                                Audiovisual Adversarial Clustering."
-                            </div>
-
-                            <div class="publication-meta">
-                                ACM Transactions on Multimedia Computing,
-                                Communications and Applications (TOMM), 2024.
-                            </div>
-
-                            <span class="under-review">
-                                Under Review
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            04
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, J.-C. Chen, W.-H. Liao, and C.-S. Chen,
-                                "Towards Adversarial Robustness for Multi-Mode
-                                Data through Metric Learning."
-                            </div>
-
-                            <div class="publication-meta">
-                                Sensors, Vol. 23, No. 13, Article 6173, 2023.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            05
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. Khan, I. Ali, F. Ghaffar, and Q. Mazhar-ul-Haq,
-                                "Classification of Macromolecules Based on Amino
-                                Acid Sequences Using Deep Learning."
-                            </div>
-
-                            <div class="publication-meta">
-                                Engineering, Technology &amp; Applied Science
-                                Research, Vol. 12, No. 6, pp. 9491–9495, 2022.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="publication reveal">
-
-                        <div class="publication-number">
-                            06
-                        </div>
-
-                        <div>
-
-                            <div class="publication-title">
-                                S. A. Shahzad, A. Hashmi, S. Khan, Y.-T. Peng,
-                                Y. Tsao, and H.-W. Wang,
-                                "LipSync Matters: A Novel Multimodal Forgery Detector."
-                            </div>
-
-                            <div class="publication-meta">
-                                APSIPA Annual Summit and Conference (APSIPA ASC),
-                                IEEE, 2022, pp. 1885–1892.
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-
-                <div style="margin-top: 30px;">
-
-                    <a
-                        class="button button-outline"
-                        href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Full Research Profile
+                    <a href="mailto:your@email.com"
+                        class="btn btn-primary">
+                        Get in Touch
                     </a>
 
                 </div>
@@ -3469,241 +1455,130 @@
 
         </section>
 
-
-
-        <!-- =====================================================
-             CONTACT
-        ====================================================== -->
-
-        <section id="contact" class="contact-section">
-
-            <div class="container">
-
-                <div class="contact-box reveal">
-
-                    <div>
-
-                        <h2>
-                            Let's Build Something
-                        </h2>
-
-                        <p>
-                            Interested in AI systems, software development,
-                            APIs, automation or intelligent applications?
-                            Let's connect.
-                        </p>
-
-                        <a
-                            class="email-link"
-                            href="mailto:sarwar@uoas.edu.pk"
-                        >
-                            sarwar@uoas.edu.pk
-                        </a>
-
-                    </div>
-
-
-                    <div class="contact-actions">
-
-                        <a
-                            class="button button-primary"
-                            href="mailto:sarwar@uoas.edu.pk"
-                        >
-                            Send Email
-                        </a>
-
-
-                        <a
-                            class="button button-outline"
-                            href="https://scholar.google.com.tw/citations?user=zK7pyo0AAAAJ&hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Research Profile
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
     </main>
 
 
-
-    <!-- =========================================================
+    <!-- =========================
          FOOTER
-    ========================================================== -->
+    ========================= -->
 
     <footer>
 
-        <div class="container">
+        <div class="container footer-inner">
 
-            <div class="footer-inner">
+            <p class="footer-brand">
+                Sarwar Khan
+            </p>
 
-                <p>
-                    © 2026 Sarwar Khan
-                </p>
+            <p>
+                AI · Software · APIs · Web · Automation
+            </p>
 
-                <p>
-                    AI · Software · APIs · Web · Automation
-                </p>
-
-            </div>
+            <p>
+                © 2026
+            </p>
 
         </div>
 
     </footer>
 
 
-</div>
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* Mobile menu */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
 
 
+        /* Close mobile menu after clicking */
 
-<script>
+        document.querySelectorAll(".nav-links a").forEach(link => {
 
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
-
-    const mobileMenu =
-        document.getElementById("mobileMenu");
-
-    const navigation =
-        document.getElementById("navigation");
-
-
-    mobileMenu.addEventListener("click", function () {
-
-        navigation.classList.toggle("open");
-
-    });
-
-
-    /* =========================================================
-       CLOSE MOBILE MENU AFTER CLICK
-    ========================================================= */
-
-    document
-        .querySelectorAll(".navigation a")
-        .forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                navigation.classList.remove("open");
-
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
             });
 
         });
 
 
-    /* =========================================================
-       ACTIVE NAVIGATION TAB
-    ========================================================= */
+        /* Scroll reveal */
 
-    const sections =
-        document.querySelectorAll("section[id]");
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
-    const navLinks =
-        document.querySelectorAll(".navigation a");
+        const observer = new IntersectionObserver(
+            (entries) => {
 
-
-    function updateActiveNavigation() {
-
-        let current = "";
-
-        sections.forEach(function (section) {
-
-            const sectionTop =
-                section.offsetTop - 150;
-
-            if (window.scrollY >= sectionTop) {
-
-                current =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(function (link) {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                "#" + current
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        updateActiveNavigation
-    );
-
-    updateActiveNavigation();
-
-
-    /* =========================================================
-       SCROLL REVEAL
-    ========================================================= */
-
-    const revealElements =
-        document.querySelectorAll(".reveal");
-
-
-    const revealObserver =
-        new IntersectionObserver(
-
-            function (entries, observer) {
-
-                entries.forEach(function (entry) {
+                entries.forEach(entry => {
 
                     if (entry.isIntersecting) {
 
-                        entry.target.classList.add(
-                            "visible"
-                        );
+                        entry.target.classList.add("visible");
 
-                        observer.unobserve(
-                            entry.target
-                        );
+                        observer.unobserve(entry.target);
 
                     }
 
                 });
 
             },
-
             {
-                threshold: 0.08
+                threshold: 0.12
             }
-
         );
 
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
 
-    revealElements.forEach(function (element) {
 
-        revealObserver.observe(element);
+        /* Active navigation */
 
-    });
+        const sections =
+            document.querySelectorAll("section[id]");
 
-</script>
+        const navItems =
+            document.querySelectorAll(".nav-links a");
 
+        window.addEventListener("scroll", () => {
+
+            let current = "";
+
+            sections.forEach(section => {
+
+                const sectionTop =
+                    section.offsetTop - 120;
+
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+
+            });
+
+            navItems.forEach(link => {
+
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
 </html>
+```
